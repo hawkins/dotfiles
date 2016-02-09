@@ -1,0 +1,109 @@
+Script for ibus started at run_im.
+Script for auto started at run_im.
+Script for default started at run_im.
+Script for ibus started at run_im.
+Script for auto started at run_im.
+Script for default started at run_im.
+xrandr: cannot find output "DVI-D-0"
+i3status: trying to auto-detect output_format setting
+i3status: auto-detection: parent process is "sh", looking at its parent
+i3status: auto-detected "i3bar"
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::sm-connect after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::show-crash-dialog after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::display after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::default-icon after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::sm-connect after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::show-crash-dialog after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::display after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::default-icon after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+
+** (x-terminal-emulator:3449): WARNING **: Binding '<Shift><Control><Alt>a' failed!
+Unable to bind hide_window key, another instance/window has it.
+[3803:3803:0206/120533:ERROR:account_tracker.cc(306)] OnGetTokenFailure: Invalid credentials.
+[3803:3803:0206/120533:ERROR:account_tracker.cc(306)] OnGetTokenFailure: Invalid credentials.
+[3803:3870:0206/120536:ERROR:get_updates_processor.cc(240)] PostClientToServerMessage() failed during GetUpdates
+[3803:3837:0206/120551:ERROR:channel.cc(305)] RawChannel read error (connection broken)
+[3803:3837:0206/120551:ERROR:channel.cc(305)] RawChannel read error (connection broken)
+[3803:3837:0206/120552:ERROR:channel.cc(305)] RawChannel read error (connection broken)
+[3803:3837:0206/120554:ERROR:channel.cc(305)] RawChannel read error (connection broken)
+[WARNING:flash/platform/pepper/pep_module.cpp(63)] SANDBOXED
+[WARNING:flash/platform/pepper/pep_module.cpp(63)] SANDBOXED
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::sm-connect after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::show-crash-dialog after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::display after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::default-icon after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::sm-connect after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::show-crash-dialog after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::display after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::default-icon after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+
+** (x-terminal-emulator:6508): WARNING **: Binding '<Shift><Control><Alt>a' failed!
+Unable to bind hide_window key, another instance/window has it.
+[3803:3870:0206/121806:ERROR:get_updates_processor.cc(240)] PostClientToServerMessage() failed during GetUpdates
+Fontconfig error: Cannot load default config file
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::sm-connect after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::show-crash-dialog after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::display after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::default-icon after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+
+** (x-terminal-emulator:10787): WARNING **: Binding '<Shift><Control><Alt>a' failed!
+Unable to bind hide_window key, another instance/window has it.
+chroot: missing operand
+Try 'chroot --help' for more information.
+[3803:3870:0206/124921:ERROR:get_updates_processor.cc(240)] PostClientToServerMessage() failed during GetUpdates
+[3803:3837:0206/125822:ERROR:channel.cc(305)] RawChannel read error (connection broken)
+[WARNING:flash/platform/pepper/pep_module.cpp(63)] SANDBOXED
+[3803:3803:0206/130307:ERROR:background_mode_manager_aura.cc(14)] Not implemented reached in virtual void BackgroundModeManager::EnableLaunchOnStartup(bool)
+[3803:3803:0206/130307:ERROR:background_mode_manager_aura.cc(19)] Not implemented reached in virtual void BackgroundModeManager::DisplayAppInstalledNotification(const extensions::Extension *)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::sm-connect after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::show-crash-dialog after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::display after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::default-icon after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+
+** (x-terminal-emulator:13756): WARNING **: Binding '<Shift><Control><Alt>a' failed!
+Unable to bind hide_window key, another instance/window has it.
+Fontconfig error: Cannot load default config file
+Fontconfig error: Cannot load default config file
+[3803:3870:0206/133614:ERROR:get_updates_processor.cc(240)] PostClientToServerMessage() failed during GetUpdates
+Fontconfig error: Cannot load default config file
+Exiting due to signal.
+
+(x-terminal-emulator:10787): GConf-WARNING **: Got Disconnected from DBus.
+
+g_dbus_connection_real_closed: Remote peer vanished with error: Underlying GIOStream returned 0 bytes on an async read (g-io-error-quark, 0). Exiting.
+g_dbus_connection_real_closed: Remote peer vanished with error: Underlying GIOStream returned 0 bytes on an async read (g-io-error-quark, 0). Exiting.
+g_dbus_connection_real_closed: Remote peer vanished with error: Underlying GIOStream returned 0 bytes on an async read (g-io-error-quark, 0). Exiting.
+Terminated
+g_dbus_connection_real_closed: Remote peer vanished with error: Underlying GIOStream returned 0 bytes on an async read (g-io-error-quark, 0). Exiting.
+[3803:3803:0206/144635:ERROR:chrome_browser_main_extra_parts_x11.cc(56)] X IO error received (X server probably went away)
+XIO:  fatal IO error 11 (Resource temporarily unavailable) on X server ":0"
+      after 15560108 requests (15560108 known processed) with 15 events remaining.
+Terminated
+g_dbus_connection_real_closed: Remote peer vanished with error: Underlying GIOStream returned 0 bytes on an async read (g-io-error-quark, 0). Exiting.
+Terminated
+Terminated
+[3840:3840:0206/204635:ERROR:x11_util.cc(82)] X IO error received (X server probably went away)

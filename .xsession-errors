@@ -1,0 +1,558 @@
+Script for ibus started at run_im.
+Script for auto started at run_im.
+Script for default started at run_im.
+Script for ibus started at run_im.
+Script for auto started at run_im.
+Script for default started at run_im.
+xrandr: cannot find output "DVI-D-0"
+i3status: trying to auto-detect output_format setting
+i3status: auto-detection: parent process is "sh", looking at its parent
+i3status: auto-detected "i3bar"
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::sm-connect after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::show-crash-dialog after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::display after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::default-icon after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::sm-connect after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::show-crash-dialog after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::display after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::default-icon after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+
+** (x-terminal-emulator:3915): WARNING **: Binding '<Shift><Control><Alt>a' failed!
+Unable to bind hide_window key, another instance/window has it.
+[4120:4120:0208/191855:ERROR:background_mode_manager_aura.cc(14)] Not implemented reached in virtual void BackgroundModeManager::EnableLaunchOnStartup(bool)
+[4120:4120:0208/191858:ERROR:account_tracker.cc(306)] OnGetTokenFailure: Invalid credentials.
+[4120:4120:0208/191858:ERROR:account_tracker.cc(306)] OnGetTokenFailure: Invalid credentials.
+[4120:4193:0208/191902:ERROR:get_updates_processor.cc(240)] PostClientToServerMessage() failed during GetUpdates
+[4120:4120:0208/192244:ERROR:navigation_entry_screenshot_manager.cc(153)] Invalid entry with unique id: 20
+[4120:4193:0208/192632:ERROR:get_updates_processor.cc(240)] PostClientToServerMessage() failed during GetUpdates
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u001b'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u001b'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u001c'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u001c'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u001c'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u001c'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u0014'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 's'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'F'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u0001'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xb1'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map ' '.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xbf'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xb5'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u001f'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xe2'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\x9c'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u0007'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '/'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xa9'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xb5'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'v'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xe4'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\x9b'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\x8e'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'o'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xa1'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '!'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'd'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\x90'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u000d'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'P'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '>'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xed'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\x88'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\x8b'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'S'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xb4'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xa5'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xc9'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'c'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\x8e'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u000d'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\x98'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'q'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'O'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xd2'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map ':'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xd6'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xe2'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xc0'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'q'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xe4'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xbe'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xee'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\x90'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xbc'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xa6'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'l'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\x9f'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\x94'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '#'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xcd'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xeb'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u0004'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xd1'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u0018'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xf9'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xf1'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xf1'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xf1'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xd9'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xd9'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 't'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u000d'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xc2'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xca'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xc8'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xf1'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xf3'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xc2'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xc2'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xc2'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xde'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xf1'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xf1'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xf9'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xf9'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xf0'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u000d'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'L'.
+/usr/bin/x-terminal-emulator:118: Warning: g_array_remove_range: assertion 'index_ < array->len' failed
+  gtk.main()
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xfe'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '>'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'f'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '"'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'S'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u007f'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xcd'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '''.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '^'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'e'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'e'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'e'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'e'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'e'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'e'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'e'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '?'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u001b'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u001b'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xf9'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xf1'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xf1'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'L'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u0011'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'M'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'L'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\x99'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xcd'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xea'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xf9'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xf1'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map ' '.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\x89'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xdf'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xb0'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xae'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xb1'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\x8c'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '/'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map ';'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xe7'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xc7'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '~'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u000b'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u0001'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u0002'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'k'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'n'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'D'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\x83'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\x83'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'M'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'M'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'M'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'D'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'M'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'M'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u000c'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u000c'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'r'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xc5'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xc5'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xc5'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xc5'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xc5'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xc5'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xc5'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xc5'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xc5'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u001f'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u001f'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u001f'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'M'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u0002'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'M'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'M'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'M'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u001b'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map ']'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xf3'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xbc'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '`'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u000d'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '3'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '('.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u0001'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xbc'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '`'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'k'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '@'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'M'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xb6'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\x90'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'L'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u0013'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'M'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map 'o'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\x99'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xf6'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\u0008'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xc8'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xf3'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xf7'.
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '
+
+(x-terminal-emulator:2029): Vte-0.0-WARNING **: Attempt to set invalid NRC map '\xf2'.
+[4120:4193:0208/193747:ERROR:get_updates_processor.cc(240)] PostClientToServerMessage() failed during GetUpdates
+[4120:4193:0208/195440:ERROR:get_updates_processor.cc(240)] PostClientToServerMessage() failed during GetUpdates
+Fontconfig error: Cannot load default config file
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::sm-connect after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::show-crash-dialog after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::display after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::default-icon after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+
+** (x-terminal-emulator:31127): WARNING **: Binding '<Shift><Control><Alt>a' failed!
+Unable to bind hide_window key, another instance/window has it.
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::sm-connect after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::sm-connect after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::sm-connect after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::sm-connect after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::show-crash-dialog after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::show-crash-dialog after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::show-crash-dialog after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::show-crash-dialog after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::display after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::display after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::display after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::default-icon after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::display after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::default-icon after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::default-icon after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::default-icon after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+
+** (x-terminal-emulator:31699): WARNING **: Binding '<Shift><Control><Alt>a' failed!
+
+** (x-terminal-emulator:31673): WARNING **: Binding '<Shift><Control><Alt>a' failed!
+Unable to bind hide_window key, another instance/window has it.Unable to bind hide_window key, another instance/window has it.
+
+
+** (x-terminal-emulator:31669): WARNING **: Binding '<Shift><Control><Alt>a' failed!
+
+** (x-terminal-emulator:31685): WARNING **: Binding '<Shift><Control><Alt>a' failed!
+Unable to bind hide_window key, another instance/window has it.
+Unable to bind hide_window key, another instance/window has it.
+restack_win(0x02a00004, 0x02a00037): Failed to found new above window.
+Fontconfig error: Cannot load default config file
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::sm-connect after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::show-crash-dialog after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::display after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::default-icon after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+
+** (terminator:1103): WARNING **: Binding '<Shift><Control><Alt>a' failed!
+Unable to bind hide_window key, another instance/window has it.
+[WARNING:flash/platform/pepper/pep_module.cpp(63)] SANDBOXED
+[4120:4193:0208/203652:ERROR:get_updates_processor.cc(240)] PostClientToServerMessage() failed during GetUpdates
+[4107:4262:0208/203714:ERROR:block_files.cc(477)] Failed to open /home/rade/.config/google-chrome/ShaderCache/GPUCache/data_0
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::sm-connect after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::show-crash-dialog after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::display after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::default-icon after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+
+** (x-terminal-emulator:4429): WARNING **: Binding '<Shift><Control><Alt>a' failed!
+Unable to bind hide_window key, another instance/window has it.
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::sm-connect after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::show-crash-dialog after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::display after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:87: Warning: Attempt to add property GnomeProgram::default-icon after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+
+** (x-terminal-emulator:6183): WARNING **: Binding '<Shift><Control><Alt>a' failed!
+Unable to bind hide_window key, another instance/window has it.
+[WARNING:flash/platform/pepper/pep_module.cpp(63)] SANDBOXED
