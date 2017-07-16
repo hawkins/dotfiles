@@ -36,6 +36,11 @@ set shiftwidth=2
 " On pressing tab, insert 2 spaces
 set expandtab
 
+
+"
+" JavaScript
+"
+
 "JavaScript syntax & indentation
 Plugin 'pangloss/vim-javascript'
 let g:javascript_plugin_jsdoc = 1
@@ -51,10 +56,39 @@ let g:jsx_ext_required = 0
 " Line numbers
 set number
 
-
 " Prettier
 Plugin 'sbdchd/neoformat'
 autocmd BufWritePre *.js Neoformat
+
+
+"
+" ReasonML
+"
+
+Plugin 'reasonml-editor/vim-reason'
+
+" Associate *.re with reason
+autocmd BufNewFile,BufRead *.re set syntax=reason
+
+" Always wrap at 90 columns
+let g:vimreason_extra_args_expr_reason = '"--print-width 90"'
+
+" Wrap at the window width
+let g:vimreason_extra_args_expr_reason = '"--print-width " . ' . "winwidth('.')"
+
+" Wrap at the window width but not if it exceeds 120 characters.
+let g:vimreason_extra_args_expr_reason = '"--print-width " . ' .  "min([120, winwidth('.')])"
+
+" the following maps cmd + shift + m to reformat only when editing a reason file.
+autocmd FileType reason map <buffer> <D-M> :ReasonPrettyPrint<Cr>
+
+" Neomake support
+let g:neomake_reason_enabled_makers = ['merlin']
+
+
+"
+" Vundle
+"
 
 call vundle#end()
 filetype plugin indent on
