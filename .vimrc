@@ -38,6 +38,12 @@ set expandtab
 
 
 "
+" Git
+"
+Plugin 'airblade/vim-gitgutter'
+
+
+"
 " JavaScript
 "
 
