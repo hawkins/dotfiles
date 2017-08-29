@@ -47,6 +47,9 @@ Plugin 'airblade/vim-gitgutter'
 " JavaScript
 "
 
+" Associate *.js with JSX
+autocmd BufNewFile,BufRead *.js set filetype=javascript.jsx
+
 "JavaScript syntax & indentation
 Plugin 'pangloss/vim-javascript'
 let g:javascript_plugin_jsdoc = 1
@@ -92,6 +95,20 @@ autocmd FileType reason map <buffer> <D-M> :ReasonPrettyPrint<Cr>
 let g:neomake_reason_enabled_makers = ['merlin']
 
 
+" 
+" Rust
+"
+
+Plugin 'rust-lang/rust.vim'
+
+" Associate *.rs files with rust
+autocmd BufNewFile,BufRead *.rs set syntax=rust
+
+" Use RustFMT to auto format code
+let g:rustfmt_autosave = 1
+let g:rustfmt_command = "rustfmt"
+
+
 "
 " Vundle
 "
@@ -105,3 +122,5 @@ autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 autocmd Filetype json setlocal ts=2 sts=2 sw=2
+autocmd Filetype rust setlocal ts=4 sts=4 sw=4
+
