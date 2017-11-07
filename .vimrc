@@ -110,6 +110,18 @@ let g:rustfmt_command = "rustfmt"
 
 
 "
+" Go
+"
+Plugin 'fatih/vim-go'
+
+" vim-go requires Vim 7.4.1689 or Neovim, but you're using an older version.
+" Please update your Vim for the best vim-go experience.
+" If you really want to continue you can set this to make the error go away:
+let g:go_version_warning = 0
+" Note that some features may error out or behave incorrectly.
+
+
+"
 " Vundle
 "
 
