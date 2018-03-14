@@ -1,3 +1,7 @@
 [user]
-	email = jkhaccounts@gmail.com
+	email = hawkins@users.noreply.github.com
 	name = Josh Hawkins
+[alias]
+	la = "!git config -l | grep alias | cut -c 7-"
+	ignored = !git ls-files -v $(git rev-parse --show-toplevel) | grep "^[[:lower:]]"
+	force = "!f() { echo \"Use the force wisely, young padawan.\n----"; git $* -f; }; f"
