@@ -66,8 +66,9 @@ let g:jsx_ext_required = 0
 set number
 
 " Prettier
-Plugin 'sbdchd/neoformat'
-autocmd BufWritePre *.js Neoformat
+Plugin 'prettier/vim-prettier'
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue Prettier
 
 
 "
