@@ -25,7 +25,8 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
-
+" My custom markdown plugin
+Plugin 'file:///Users/hawkins/git/Touchdown.vim'
 
 "Lost the old one... oops
 filetype plugin indent on

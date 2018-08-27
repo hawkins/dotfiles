@@ -124,7 +124,7 @@ alias tree="tree -I node_modules"
 eval "$(rbenv init -)"
 
 # Rust
-source $HOME/.cargo/env
+[ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
 # https://github.com/rust-lang-nursery/rustfmt/issues/1707#issuecomment-310005652
 export LD_LIBRARY_PATH=$(rustc --print sysroot)/lib:$LD_LIBRARY_PATH
 
