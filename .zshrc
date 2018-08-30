@@ -148,3 +148,8 @@ export PATH="/usr/local/opt/llvm/bin:$PATH"
 # Add bat preview
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 
+# Kill ports more easily on my mac
+stop() {
+  lsof -t -i tcp:$1 | xargs kill
+}
+alias stfu=stop
