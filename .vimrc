@@ -26,7 +26,8 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
 " My custom markdown plugin
-Plugin 'file:///Users/hawkins/git/Touchdown.vim'
+Plugin 'hawkins/Touchdown.vim'
+Plugin 'hawkins/vim-markdown'
 
 "Lost the old one... oops
 filetype plugin indent on
