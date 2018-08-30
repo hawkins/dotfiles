@@ -43,6 +43,12 @@ set expandtab
 "
 Plugin 'airblade/vim-gitgutter'
 
+if &diff
+  set cursorline
+  map ] ]c
+  map [ [c
+endif
+
 
 "
 " JavaScript
