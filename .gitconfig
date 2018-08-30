@@ -5,3 +5,10 @@
 	aliases = "!git config -l | grep alias | cut -c 7- | awk '{split($0, a, \"=\"; print a[1], \" => \", a[2];}'"
 	ignored = !git ls-files -v $(git rev-parse --show-toplevel) | grep "^[[:lower:]]"
 	force = "!f() { echo \"Use the force wisely, young padawan.\n----"; git $* -f; }; f"
+	multi = "!ls -d */ | xargs -I {} git -C {} $*"
+[merge]
+	tool = vimdiff
+[mergetool]
+	trustExitCode = false
+[rerere]
+	enabled = true
