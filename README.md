@@ -10,3 +10,20 @@ There's plenty of popcorn to go around.
 ## Notable things
 
 TODO. Hehe :slightly_smiling_face:
+
+- `dadjoke` in `.zshrc`:
+  - Gives you a random dadjoke every time you open a shell
+    ```
+     ___________________________________________________________________________________
+    < A bartender broke up with her boyfriend, but he kept asking her for another shot. >
+     -----------------------------------------------------------------------------------
+       \
+        \
+            .--.
+           |o_o |
+           |:_/ |
+          //   \ \
+         (|     | )
+        /'\_   _/`\
+        \___)=(___/
+    ```
