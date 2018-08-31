@@ -8,8 +8,18 @@ export ZSH=/Users/hawkins/.oh-my-zsh
 # ZSH_THEME="spaceship"
 ZSH_THEME="zeit"
 
+# this generates a random cowsay character
+function cowsay_random {
+  cows=(`cowsay -l | grep -v '/'`)
+  cow=${cows[$RANDOM % ${#cows[@]} ]}
+  cowsay -n -f $cow "$@"
+}
+
 # Give me a dad joke! :D
-curl https://icanhazdadjoke.com/ --silent
+function dadjoke {
+  curl https://icanhazdadjoke.com/ --silent | cowsay_random
+}
+dadjoke
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
