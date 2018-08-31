@@ -8,6 +8,9 @@ export ZSH=/Users/hawkins/.oh-my-zsh
 # ZSH_THEME="spaceship"
 ZSH_THEME="zeit"
 
+# Give me a dad joke! :D
+curl https://icanhazdadjoke.com/ --silent
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
