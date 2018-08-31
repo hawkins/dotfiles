@@ -27,3 +27,12 @@ TODO. Hehe :slightly_smiling_face:
         /'\_   _/`\
         \___)=(___/
     ```
+
+## Install
+
+To install these, just symlink them to your home directory:
+
+```bash
+ln -s ~/git/dotfiles/.* ~
+ln -s ~/git/dotfiles/.i3/config ~/.i3/config
+```
