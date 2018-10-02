@@ -12,6 +12,21 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'hawkins/Touchdown.vim'
 Plugin 'hawkins/vim-markdown'
 
+"
+" C/C++
+"
+Plugin 'c.vim'
+"Plugin 'rip-rip/clang_complete'
+Plugin 'rhysd/vim-clang-format'
+" map to <Leader>cf in C++ code
+autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
+" if you install vim-operator-user
+autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
+" Toggle auto formatting:
+nmap <Leader>C :ClangFormatAutoToggle<CR>
+autocmd FileType c ClangFormatAutoEnable
+
 " NERDTree is a file tree side bar
 Plugin 'scrooloose/nerdtree'
 " Open NERDTree when no files are specified
