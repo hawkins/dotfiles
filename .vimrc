@@ -93,29 +93,11 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.gra
 
 
 "
-" ReasonML
+" Ruby / Rails
 "
-
-Plugin 'reasonml-editor/vim-reason'
-
-" Associate *.re with reason
-autocmd BufNewFile,BufRead *.re set syntax=reason
-
-" Always wrap at 90 columns
-let g:vimreason_extra_args_expr_reason = '"--print-width 90"'
-
-" Wrap at the window width
-let g:vimreason_extra_args_expr_reason = '"--print-width " . ' . "winwidth('.')"
-
-" Wrap at the window width but not if it exceeds 120 characters.
-let g:vimreason_extra_args_expr_reason = '"--print-width " . ' .  "min([120, winwidth('.')])"
-
-" the following maps cmd + shift + m to reformat only when editing a reason file.
-autocmd FileType reason map <buffer> <D-M> :ReasonPrettyPrint<Cr>
-
-" Neomake support
-let g:neomake_reason_enabled_makers = ['merlin']
-
+Plugin 'tpope/vim-rails'
+Plugin 'KurtPreston/vim-autoformat-rails'
+"autocmd BufWritePre *.rb, *.html.erb execute('call <SID>AutoFormatRails()')
 
 " 
 " Rust
