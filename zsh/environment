@@ -1,0 +1,35 @@
+# zsh/environment
+
+# TODO: ssh agent
+
+# Ruby
+eval "$(rbenv init -)"
+export PATH="$PATH:$HOME/.rvm/bin"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# Rust
+[ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
+# https://github.com/rust-lang-nursery/rustfmt/issues/1707#issuecomment-310005652
+export LD_LIBRARY_PATH=$(rustc --print sysroot)/lib:$LD_LIBRARY_PATH
+
+# LLVM
+# To use the bundled libc++ please add the following LDFLAGS:
+export LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
+# installed via `brew install llvm`
+# This formula is keg-only, which means it was not symlinked into /usr/local,
+#   because macOS already provides this software and installing another version in
+#   Parallel can cause all kinds of trouble.
+# If you need to have this software first in your PATH run:
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+# For compilers to find this software you may need to set:
+#   LDFLAGS:  -L/usr/local/opt/llvm/lib
+#   CPPFLAGS: -I/usr/local/opt/llvm/include
+
+# Android Studio / React Native things
+export ANDROID_HOME=${HOME}/Library/Android/sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+export hawkins="https://github.com/hawkins"
+export github="https://github.com"
+export eli="https://github.com/elicdavis"
+

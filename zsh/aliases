@@ -1,0 +1,49 @@
+# zsh/aliases
+# For a full list of active aliases, run `alias`.
+
+# College linux holdovers
+alias reload="source ~/.zshrc"
+alias tdnotes="vim /Users/hawkins/Documents/notes.txt"
+# alias logout="sudo pkill -KILL -u hawkins"
+
+# Git
+alias git="hub"
+#alias "git create"="sudo hub create"
+alias "thrust"="git push -f"
+#alias up="git add -up"
+# Delete any merged branches
+alias trimbranches="git branch --merged | egrep -v '(^\*|master|dev|develop)' | xargs git branch -d"
+
+# Node
+alias deps="npm list --depth=0"
+alias tree="tree -I node_modules"
+
+# React
+alias cra="create-react-app"
+alias crna="create-react-native-app"
+export codemods="/Users/hawkins/git/react-codemod/transforms"
+
+# Misc
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+
+# Kill TCP ports more easily on my mac
+# Usage: stop 3000
+# TODO: Print usage if $1 is empty
+stop() {
+  lsof -t -i tcp:$1 | xargs kill
+}
+alias stfu=stop
+
+# Generates a random cowsay character
+# TODO: One of these is not a valid cow?
+function cowsay_random {
+  cows=(`cowsay -l | grep -v '/'`)
+  cow=${cows[$RANDOM % ${#cows[@]} ]}
+  cowsay -n -f $cow "$@"
+}
+
+# Give me a dad joke! :D
+function dadjoke {
+  curl https://icanhazdadjoke.com/ --silent | cowsay_random
+}
+

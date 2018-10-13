@@ -1,3 +1,10 @@
+# zshrc
+# Configures options provided by zsh in stock zshrc
+# Don't edit this, look to dotfiles/zsh/config instead
+
+# Note this dotfiles config is auto-generated and not tracked under symlink.
+source ~/.dotfiles_config
+
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
@@ -7,19 +14,6 @@ export ZSH=~/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="spaceship"
 ZSH_THEME="zeit"
-
-# this generates a random cowsay character
-function cowsay_random {
-  cows=(`cowsay -l | grep -v '/'`)
-  cow=${cows[$RANDOM % ${#cows[@]} ]}
-  cowsay -n -f $cow "$@"
-}
-
-# Give me a dad joke! :D
-function dadjoke {
-  curl https://icanhazdadjoke.com/ --silent | cowsay_random
-}
-dadjoke
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -59,13 +53,7 @@ dadjoke
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-
-# User configuration
-
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/Users/hawkins/Documents/Games:/usr/local/texlive/2017/bin/x86_64-darwin:/usr/local/go/bin:/usr/local/go:/opt/metasploit-framework/bin:/Users/hawkins/go/src/github.com/huydx/hget/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
-
+#plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
@@ -87,75 +75,7 @@ source $ZSH/oh-my-zsh.sh
 # Disable autocd
 # unsetopt autocd
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias reload="source ~/.zshrc"
-alias tdnotes="vim /Users/hawkins/Documents/notes.txt"
-# alias logout="sudo pkill -KILL -u hawkins"
-export hawkins="https://github.com/hawkins"
-export github="https://github.com"
-export eli="https://github.com/elicdavis"
-alias git="hub"
-alias "git create"="sudo hub create"
-alias "thrust"="git push -f"
-alias up="git add -up"
-alias trimbranches="git branch --merged | egrep -v '(^\*|master|dev|develop)' | xargs git branch -d"
+# export MANPATH="/usr/local/man:$MANPATH"
 
-# Android Studio / React Native things
-export ANDROID_HOME=${HOME}/Library/Android/sdk
-export PATH=${PATH}:${ANDROID_HOME}/tools
-export PATH=${PATH}:${ANDROID_HOME}/platform-tools
-
-# Facebook <3 terminal
-alias cra="create-react-app"
-alias crna="create-react-native-app"
-
-# React codemods
-export codemods="/Users/hawkins/git/react-codemod/transforms"
-
-# Random aliases
-alias deps="npm list --depth=0"
-alias tree="tree -I node_modules"
-
-# Ruby
-eval "$(rbenv init -)"
-
-# Rust
-[ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
-# https://github.com/rust-lang-nursery/rustfmt/issues/1707#issuecomment-310005652
-export LD_LIBRARY_PATH=$(rustc --print sysroot)/lib:$LD_LIBRARY_PATH
-
-
-# LLVM
-# To use the bundled libc++ please add the following LDFLAGS:
-export LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
-# installed via `brew install llvm`
-# This formula is keg-only, which means it was not symlinked into /usr/local,
-#   because macOS already provides this software and installing another version in
-#   Parallel can cause all kinds of trouble.
-# If you need to have this software first in your PATH run:
-export PATH="/usr/local/opt/llvm/bin:$PATH"
-# For compilers to find this software you may need to set:
-#   LDFLAGS:  -L/usr/local/opt/llvm/lib
-#   CPPFLAGS: -I/usr/local/opt/llvm/include
-
-# Add fzf keybindings
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Add bat preview
-alias preview="fzf --preview 'bat --color \"always\" {}'"
-
-# Kill ports more easily on my mac
-stop() {
-  lsof -t -i tcp:$1 | xargs kill
-}
-alias stfu=stop
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+# User configuration
+source $DOTFILES/zsh/config
