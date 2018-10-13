@@ -30,9 +30,8 @@ TODO. Hehe :slightly_smiling_face:
 
 ## Install
 
-To install these, just symlink them to your home directory:
+To install these, I include a simple `install.sh` script to just symlink them to your home directory:
 
 ```bash
-ln -s ~/git/dotfiles/.* ~
-ln -s ~/git/dotfiles/.i3/config ~/.i3/config
+./install.sh
 ```
