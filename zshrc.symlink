@@ -123,16 +123,6 @@ export codemods="/Users/hawkins/git/react-codemod/transforms"
 alias deps="npm list --depth=0"
 alias tree="tree -I node_modules"
 
-# Hawkins.is
-#export MONGO_USER="site"
-#export MONGO_PASS="IPM95LNPtLaR"
-
-
-# Spaceship ZSH theme
-# installed via npm i -g spaceship-zsh-theme
-# source "/Users/hawkins/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
-
-
 # Ruby
 eval "$(rbenv init -)"
 
