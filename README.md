@@ -42,3 +42,12 @@ Other things you need include:
 - oh-my-zsh
 - node
 - npm i -g cowsay
+
+And I warned you that I didn't tailor these dotfiles for anyone but me - so unless you go by `hawkins`, you're gonna have a bad time.
+Go make yourself a mimosa and get crackin' on a find-and-replace throughout a few places:
+
+- `gitconfig`: `email = hawkins@users.noreply.github.com`
+- `gitconfig`: `name = Josh Hawkins`
+- `zsh/aliases`: `tdnotes="vim /Users/hawkins/Documents/notes.txt"`
+- `zsh/config`: `PATH=...`
+- There might be more but frankly I'll probably be Josh Hawkins for a very very long time so I'm not going to keep this list up to date, so you can just sip on that mimosa and run `grep hawkins -r *`
