@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # Generate dotfiles_config
 DOTFILES=$(pwd)
