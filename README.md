@@ -35,3 +35,10 @@ To install these, I include a simple `install.sh` script to just symlink them to
 ```bash
 ./install.sh
 ```
+
+Other things you need include:
+
+- rbenv
+- oh-my-zsh
+- node
+- npm i -g cowsay
