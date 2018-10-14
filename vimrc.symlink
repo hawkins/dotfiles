@@ -12,6 +12,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'hawkins/Touchdown.vim'
 Plugin 'hawkins/vim-markdown'
 
+set showcmd
+
 "
 " EasyMotion
 "
@@ -78,8 +80,8 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " ... or a directory is opened
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
-" Toggle tree with \ \
-map <leader><leader> :NERDTreeToggle<CR>
+nmap <leader>\t :NERDTreeToggle<CR>
+nmap <leader>\f :NERDTreeFocus<CR>
 " Show hidden / dot files by default
 let NERDTreeShowHidden=1
 
