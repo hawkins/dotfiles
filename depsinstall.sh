@@ -3,7 +3,7 @@
 # ZSH
 # TODO: Test this
 sudo apt-get install zsh
-chsh $(whoami) /bin/zsh
+chsh $(whoami) --shell /bin/zsh
 
 # Oh-My-ZSH!
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
