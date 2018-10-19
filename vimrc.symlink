@@ -57,6 +57,14 @@ let g:EasyMotion_use_smartsign_us = 1
 map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
 
+
+"
+" FuzzyFinder fzf
+"
+set rtp+=~/.fzf
+map <C-f> :FZF<CR>
+
+
 "
 " C/C++
 "

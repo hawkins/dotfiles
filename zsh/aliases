@@ -25,6 +25,8 @@ export codemods="/Users/hawkins/git/react-codemod/transforms"
 
 # Misc
 alias preview="fzf --preview 'bat --color \"always\" {}'"
+alias vimfzf='vim $(preview)'
+alias vimf='vimfzf'
 
 # Kill TCP ports more easily on my mac
 # Usage: stop 3000
