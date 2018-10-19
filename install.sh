@@ -31,6 +31,8 @@ do
   link $i $file
 done
 
+# Special purpose files
+ln -fn $DOTFILES/zsh/zeit.zsh-theme ~/.oh-my-zsh/themes/zeit.zsh-theme && echo "Installed ZSH Theme: Zeit"
+
 # Finally, prepare the shell with new dotfiles
 source ~/.zshrc
-
