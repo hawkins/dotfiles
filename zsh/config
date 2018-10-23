@@ -5,7 +5,7 @@
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
 
 # TODO: Clean up this hellish path
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/Users/hawkins/Documents/Games:/usr/local/texlive/2017/bin/x86_64-darwin:/usr/local/go/bin:/usr/local/go:/opt/metasploit-framework/bin:/Users/hawkins/go/src/github.com/huydx/hget/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/Users/hawkins/Documents/Games:/usr/local/texlive/2017/bin/x86_64-darwin:/usr/local/go/bin:/usr/local/go:/opt/metasploit-framework/bin:/Users/hawkins/go/src/github.com/huydx/hget/bin:$PATH"
 
 # Load other ZSH config files
 source $DOTFILES/zsh/aliases

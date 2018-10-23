@@ -2,11 +2,6 @@
 
 # TODO: ssh agent
 
-# Ruby
-eval "$(rbenv init -)"
-export PATH="$PATH:$HOME/.rvm/bin"
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 # Rust
 [ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
 # https://github.com/rust-lang-nursery/rustfmt/issues/1707#issuecomment-310005652
@@ -33,4 +28,15 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export hawkins="https://github.com/hawkins"
 export github="https://github.com"
 export eli="https://github.com/elicdavis"
+
+# Ruby
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# Ruby install issues
+#export PATH="/usr/local/opt/openssl/bin:$PATH"
+#export PATH="/usr/local/opt/curl/bin:$PATH"
+#export LDFLAGS="-L/usr/local/opt/openssl/lib"
+#export CPPFLAGS="-I/usr/local/opt/openssl/include"
+#export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
 
