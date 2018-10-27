@@ -150,6 +150,7 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.gra
 "
 Plugin 'tpope/vim-rails'
 Plugin 'KurtPreston/vim-autoformat-rails'
+Plugin 'ngmy/vim-rubocop'
 "autocmd BufWritePre *.rb, *.html.erb execute('call <SID>AutoFormatRails()')
 
 " 
