@@ -40,3 +40,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 #export CPPFLAGS="-I/usr/local/opt/openssl/include"
 #export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
 
+
+# Jetbrains
+export PATH="$PATH:$DOTFILES/jetbrains"
