@@ -119,6 +119,16 @@ nnoremap <C-l> <C-W>l
 "         "
 """""""""""
 
+""""""""""""""""
+" Solarized    "
+"              "
+" Color scheme "
+""""""""""""""""
+
+Plugin 'altercation/vim-colors-solarized'
+let g:solarized_termtrans = 1
+set background=dark
+
 """""""""""""""""""""""""""""""""""""
 " Touchdown - my minimal note taker "
 "                                   "
@@ -331,3 +341,10 @@ autocmd Filetype rust setlocal ts=4 sts=4 sw=4  " Override global indentation se
 call vundle#end()
 filetype plugin indent on
 
+""""""""""""""""""
+" Final settings "
+""""""""""""""""""
+
+" Apply color scheme
+colorscheme solarized
+highlight LineNr ctermfg=blue
