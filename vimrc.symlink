@@ -1,23 +1,99 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+""""""""""
+" Vundle "
+""""""""""
 
-" set the runtime path to include Vundle and initialize
+" Note: These settings are required and come from the Vundle readme
+set nocompatible              " We're not in Vi anymore
+filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'VundleVim/Vundle.vim' " Let Vundle manage itself
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+""""""""""""
+"          "
+" Settings "
+"          "
+""""""""""""
 
-" My custom markdown plugin
+"""""""""""
+" General "
+"""""""""""
+
+set number             " Show line numbers on left of screen
+set showcmd            " Show last command in last line of screen
+set visualbell         " Show a visible indicator instead of an audible beep
+set hidden             " Hide buffers instead of closing them
+set lazyredraw         " Don't redraw while executing macros, registers, etc
+set foldlevelstart=999 " Start with all folds expanded
+
+syntax enable          " Syntax highlighting but don't override color scheme
+
+""""""""""""""
+" Whitespace "
+""""""""""""""
+
+" Note: indentation may be overriden per-language below
+
+set autoindent         " Copy indent from current line when starting a new line
+set smartindent        " C-like-langs auto indenting after { and 'cinwords'
+set smarttab           " Change how Tab and Backspace behave
+set expandtab          " Expand tab into appropriate number of spaces
+set softtabstop=2      " Number of spaces a Tab counts for when editing, like inserting a Tab or using Backspace
+set tabstop=2          " Number of spaces a Tab in the file counts for
+set shiftwidth=2       " Number of spaces to use for each step of (auto)indent (>>, <<, cindent, etc)
+set nowrap             " Wrap lines on screen (not buffer)?
+set textwidth=0        " Don't break lines to reach any particular width
+set wrapmargin=0       " Combined with textwidth=0 to prevent line breaks while editing
+set listchars=tab:__,trail:.,extends:>
+set list               " Show invisibles according to 'listchars' value
+
+"""""""""""""
+" Scrolling "
+"""""""""""""
+
+set scrolloff=8        " Minimal number of lines to keep above and below the cursor
+set sidescroll=1       " Minimal number of columns to scroll horizontally (wrap must be off)
+set sidescrolloff=15   " Minimal number of characters to keep to the left and right of cursor
+
+""""""""""
+" Search "
+""""""""""
+
+" Note: The easymotion section below is also very relevant to search
+
+set incsearch          " Incrementally apply the pattern as you type to show results in real-time
+set hlsearch           " Highlight previous search patterns
+set ignorecase         " Case insensitive patterns by default
+set smartcase          " Case sensitive patterns when you type an uppercase letter
+
+"""""""""""
+"         "
+" Plugins "
+"         "
+"""""""""""
+
+"""""""""""""""""""""""""""""""""""""
+" Touchdown - my minimal note taker "
+"                                   "
+" Primarily used for Markdown files "
+"""""""""""""""""""""""""""""""""""""
+
 Plugin 'hawkins/Touchdown.vim'
 "Plugin 'file:///Users/hawkins/git/Touchdown.vim'
+
+" TODO: Don't map indent/outdent
+
+" tpope/vim-markdown - markdown syntax and more
+" Recommended with hawkins/Touchdown.vim
+" I forked vim-markdown to change list depth limits
 Plugin 'hawkins/vim-markdown'
 
-set showcmd
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" EasyMotion - makes moving around files easier "
+"                                               "
+" I mainly use this for searching               "
+"""""""""""""""""""""""""""""""""""""""""""""""""
 
-"
-" EasyMotion
-"
 Plugin 'easymotion/vim-easymotion'
 " <Leader>f{char} to move to {char}
 map  <Leader>f <Plug>(easymotion-bd-f)
@@ -38,7 +114,7 @@ nmap <Leader>w <Plug>(easymotion-overwin-w)
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 
-" Require tpope/vim-repeat to enable dot repeat support
+" tpope/vim-repeat - required to enable dot repeat support
 Plugin 'tpope/vim-repeat'
 " Jump to anywhere with only `s{char}{target}`
 " `s<CR>` repeat last find motion.
@@ -59,29 +135,22 @@ map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
 
 
-"
-" FuzzyFinder fzf
-"
+""""""""""""""""""""
+" FuzzyFinder fzf  "
+"                  "
+" Search for files "
+""""""""""""""""""""
+
 set rtp+=~/.fzf
 map <C-f> :FZF<CR>
 
 
-"
-" C/C++
-"
-Plugin 'c.vim'
-"Plugin 'rip-rip/clang_complete'
-Plugin 'rhysd/vim-clang-format'
-" map to <Leader>cf in C++ code
-autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
-autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
-" if you install vim-operator-user
-autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
-" Toggle auto formatting:
-nmap <Leader>C :ClangFormatAutoToggle<CR>
-autocmd FileType c ClangFormatAutoEnable
+"""""""""""""""""""""""""""
+" NERDTree                "
+"                         "
+" File tree as a side bar "
+"""""""""""""""""""""""""""
 
-" NERDTree is a file tree side bar
 Plugin 'scrooloose/nerdtree'
 " Open NERDTree when no files are specified
 autocmd StdinReadPre * let s:std_in=1
@@ -94,105 +163,122 @@ nmap <leader>\f :NERDTreeFocus<CR>
 " Show hidden / dot files by default
 let NERDTreeShowHidden=1
 
-"Lost the old one... oops
-filetype plugin indent on
-" show existing tab with 2 spaces width
-set tabstop=2
-" when indenting with '>', use 2 spaces width
-set shiftwidth=2
-" On pressing tab, insert 2 spaces
-set expandtab
-" Open folds expanded by default
-set foldlevelstart=999
 
+""""""""""""""""""""
+" Git / git-gutter "
+""""""""""""""""""""
 
-"
-" Git
-"
 Plugin 'airblade/vim-gitgutter'
 
+" Vimdiff aka git mergetool
 if &diff
+  " Show where we are
   set cursorline
+  " Jump to next/previous differences
   map ] ]c
   map [ [c
 endif
 
+""""""""""""""""""""""""""""""""""""""""""""
+" Prettier                                 "
+"                                          "
+" Autoformats languages based on their AST "
+""""""""""""""""""""""""""""""""""""""""""""
 
-"
-" JavaScript
-"
+Plugin 'prettier/vim-prettier'
 
-" Associate *.js with JSX
+" Note: This also maps :Prettier to <Leader>p
+
+" To enable vim-prettier to run in files without requiring the '@format' doc
+" tag, first disable the default autoformat, then update to your own custom
+" behaviour
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
+
+
+let g:prettier#quickfix_enabled = 0    " Parsing errors open quickfix window?
+let g:prettier#quickfix_auto_focus = 1 " Autofocus the quickfix window when it opens?
+
+""""""""""""""""""""""""""""""""""""""""""""
+"                                          "
+" Language-specific Settings and Plugins   "
+"                                          "
+" The following blocks are configuring Vim "
+" for specific programming languages       "
+" and related tools                        "
+"                                          "
+""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""
+" C/C++ "
+"""""""""
+
+" TODO: What do these provide again?
+Plugin 'c.vim'
+"Plugin 'rip-rip/clang_complete'
+
+" rhysd/vim-clang-format - Clang autoformatting
+Plugin 'rhysd/vim-clang-format'
+autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
+nmap <Leader>C :ClangFormatAutoToggle<CR>
+autocmd FileType c ClangFormatAutoEnable
+
+" if you install vim-operator-user
+" autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
+
+""""""""""""""
+" JavaScript "
+""""""""""""""
+
+" I write a lot of React code with JSX, so I'll assume all JS is actually JSX
+" TODO: Is this necessary since how we initialize mxw/vim-jsx below says to not require .jsx?
 autocmd BufNewFile,BufRead *.js set filetype=javascript.jsx
 
-"JavaScript syntax & indentation
+" pangloss/vim-javascript - JS syntax & indentation
 Plugin 'pangloss/vim-javascript'
-let g:javascript_plugin_jsdoc = 1
-let g:javascript_plugin_flow = 1
+let g:javascript_plugin_jsdoc = 1 " JSDoc comments
+let g:javascript_plugin_flow = 1  " Flow types
 
-" Syntax highlighting
-syntax on
-
-" vim-jsx
+" mxw/vim-jsx - JSX syntax & indentation
 Plugin 'mxw/vim-jsx'
-let g:jsx_ext_required = 0
+let g:jsx_ext_required = 0        " *.js == JSX
 
-" Line numbers
-set number
+""""""""""""""""
+" Ruby / Rails "
+""""""""""""""""
 
-" Prettier
-Plugin 'prettier/vim-prettier'
-let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue Prettier
-
-
-"
-" Ruby / Rails
-"
 Plugin 'tpope/vim-rails'
-Plugin 'KurtPreston/vim-autoformat-rails'
-Plugin 'ngmy/vim-rubocop'
-"Plugin 'file:///Users/hawkins/git/vim-rubocop'
-"autocmd BufWritePre *.rb, *.html.erb execute('call <SID>AutoFormatRails()')
 
-" 
-" Rust
-"
+" RuboCop - linter for Ruby
+" I forked it to make some UI changes
+"Plugin 'file:///Users/hawkins/git/vim-rubocop'
+Plugin 'hawkins/vim-rubocop'
+
+autocmd FileType ruby nmap rr :RuboCop<CR>
+autocmd FileType ruby nmap ra :RuboCop --auto-correct<CR>
+autocmd FileType ruby nmap rs :RuboCopShow<CR>
+
+""""""""
+" Rust "
+""""""""
 
 Plugin 'rust-lang/rust.vim'
 
-" Associate *.rs files with rust
-autocmd BufNewFile,BufRead *.rs set syntax=rust
-
-" Use RustFMT to auto format code
-let g:rustfmt_autosave = 1
+let g:rustfmt_autosave = 1                      " Enable rustfmt
 let g:rustfmt_command = "rustfmt"
 
+autocmd BufNewFile,BufRead *.rs set syntax=rust " Associate *.rs files with rust
+autocmd Filetype rust setlocal ts=4 sts=4 sw=4  " Override global indentation settings
 
-"
-" Go
-"
-Plugin 'fatih/vim-go'
+""""""""""
+"        "
+" Vundle "
+"        "
+""""""""""
 
-" vim-go requires Vim 7.4.1689 or Neovim, but you're using an older version.
-" Please update your Vim for the best vim-go experience.
-" If you really want to continue you can set this to make the error go away:
-let g:go_version_warning = 0
-" Note that some features may error out or behave incorrectly.
-
-
-"
-" Vundle
-"
+" Note: No more plugins can be initialized after this point
 
 call vundle#end()
 filetype plugin indent on
-
-
-" Language specific whitespace settings
-autocmd Filetype html setlocal ts=2 sts=2 sw=2
-autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
-autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
-autocmd Filetype json setlocal ts=2 sts=2 sw=2
-autocmd Filetype rust setlocal ts=4 sts=4 sw=4
 
