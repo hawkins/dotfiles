@@ -26,6 +26,15 @@ set hidden             " Hide buffers instead of closing them
 set lazyredraw         " Don't redraw while executing macros, registers, etc
 set foldlevelstart=999 " Start with all folds expanded
 
+" Timeouts for handling input and waiting to determine if there is a mapping
+" or not at that key command
+set notimeout
+set ttimeout
+set ttimeoutlen=200
+
+" TODO: I use this in other configs, but do I really want to keep it here?
+set nostartofline
+
 syntax enable          " Syntax highlighting but don't override color scheme
 
 """"""""""""""
@@ -47,6 +56,18 @@ set wrapmargin=0       " Combined with textwidth=0 to prevent line breaks while 
 set listchars=tab:__,trail:.,extends:>
 set list               " Show invisibles according to 'listchars' value
 
+function! <SID>StripTrailingWhitespace()
+  " Draw two circles
+  let _s = @/
+  let l = line(".")
+  let c = col(".")
+  " Draw the rest of the owl
+  %s/\s\+$//e
+  let @/ = _s
+  call cursor(l,c)
+endfunction
+autocmd BufWritePre * :call <SID>StripTrailingWhitespace()
+
 """""""""""""
 " Scrolling "
 """""""""""""
@@ -62,9 +83,32 @@ set sidescrolloff=15   " Minimal number of characters to keep to the left and ri
 " Note: The easymotion section below is also very relevant to search
 
 set incsearch          " Incrementally apply the pattern as you type to show results in real-time
-set hlsearch           " Highlight previous search patterns
 set ignorecase         " Case insensitive patterns by default
 set smartcase          " Case sensitive patterns when you type an uppercase letter
+set hlsearch           " Highlight previous search patterns
+" But hide the highlights when we want to
+map <Leader>/ :nohlsearch<CR>
+
+""""""""""""""""""
+"                "
+" Misc. Mappings "
+"                "
+""""""""""""""""""
+
+" Copy/Paste
+" See https://vi.stackexchange.com/a/96/19747
+" * - PRIMARY   (copy-on-select)
+" + - CLIPBOARD (^C,^V, MS Windows-like)
+noremap <Leader>y "+y
+noremap <Leader>p "+p
+"noremap <Leader>Y "*y
+"noremap <Leader>P "*p
+
+" Window movement
+nnoremap <C-h> <C-W>h
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-l> <C-W>l
 
 """""""""""
 "         "
