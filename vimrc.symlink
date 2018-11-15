@@ -347,4 +347,4 @@ filetype plugin indent on
 
 " Apply color scheme
 colorscheme solarized
-highlight LineNr ctermfg=blue
+highlight LineNr ctermfg=brown
