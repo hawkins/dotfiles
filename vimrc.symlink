@@ -241,12 +241,65 @@ Plugin 'prettier/vim-prettier'
 " To enable vim-prettier to run in files without requiring the '@format' doc
 " tag, first disable the default autoformat, then update to your own custom
 " behaviour
-let g:prettier#autoformat = 0
+let g:prettier#autoformat = 1
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
 
-
-let g:prettier#quickfix_enabled = 0    " Parsing errors open quickfix window?
+let g:prettier#exec_cmd_path =
+      \"/usr/local/bin/prettier"       " Avoid using projects local prettier versions
+let g:prettier#quickfix_enabled = 1    " Parsing errors open quickfix window?
 let g:prettier#quickfix_auto_focus = 1 " Autofocus the quickfix window when it opens?
+
+" max line length that prettier will wrap on
+" Prettier default: 80
+" let g:prettier#config#print_width = 80
+
+" number of spaces per indentation level
+" Prettier default: 2
+" let g:prettier#config#tab_width = 2
+
+" use tabs over spaces
+" Prettier default: false
+" let g:prettier#config#use_tabs = 'false'
+
+" print semicolons
+" Prettier default: true
+" let g:prettier#config#semi = 'true'
+
+" single quotes over double quotes
+" Prettier default: false
+" Vim-Prettier default: true
+let g:prettier#config#single_quote = 'false'
+
+" print spaces between brackets
+" Prettier default: true
+" Vim-Prettier default: false
+let g:prettier#config#bracket_spacing = 'true'
+
+" put > on the last line instead of new line
+" Prettier default: false
+" Vim-Prettier default: true
+let g:prettier#config#jsx_bracket_same_line = 'false'
+
+" avoid|always
+" Prettier default: avoid
+" Vim-Prettier default: always
+let g:prettier#config#arrow_parens = 'avoid'
+
+" none|es5|all
+" Prettier default: none
+" Vim-Prettier default: all
+let g:prettier#config#trailing_comma = 'none'
+
+" flow|babylon|typescript|css|less|scss|json|graphql|markdown
+" Prettier default: babylon
+" Vim-Prettier default: flow
+let g:prettier#config#parser = 'babylon'
+
+" cli-override|file-override|prefer-file
+" let g:prettier#config#config_precedence = 'prefer-file'
+
+" always|never|preserve
+" let g:prettier#config#prose_wrap = 'preserve'
 
 """"""""""""""""""""""""""""""""""""""""""""
 "                                          "
