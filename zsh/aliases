@@ -13,6 +13,8 @@ alias "thrust"="git push -f"
 #alias up="git add -up"
 # Delete any merged branches
 alias trimbranches="git branch --merged | egrep -v '(^\*|master|dev|develop)' | xargs git branch -d"
+export github="git@github.com"
+export hawkins="$github:hawkins"
 
 # Node
 alias deps="npm list --depth=0"

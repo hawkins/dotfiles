@@ -28,9 +28,6 @@ export PATH="/usr/local/opt/llvm/bin:$PATH"
 export ANDROID_HOME=${HOME}/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
-export hawkins="https://github.com/hawkins"
-export github="https://github.com"
-export eli="https://github.com/elicdavis"
 
 # Ruby
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
