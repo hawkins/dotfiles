@@ -2,6 +2,9 @@
 
 # TODO: ssh agent
 
+# npm
+export PATH=${PATH}:$(npm config get prefix)/bin
+
 # Rust
 [ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
 # https://github.com/rust-lang-nursery/rustfmt/issues/1707#issuecomment-310005652
