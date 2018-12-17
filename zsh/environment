@@ -13,7 +13,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # LLVM
 # To use the bundled libc++ please add the following LDFLAGS:
-export LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
+#export LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
 # installed via `brew install llvm`
 # This formula is keg-only, which means it was not symlinked into /usr/local,
 #   because macOS already provides this software and installing another version in
