@@ -1,1 +1,4 @@
 jetbrains/*
+.dotfiles-update
+*.swp
+*.swo

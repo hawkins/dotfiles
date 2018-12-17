@@ -17,5 +17,9 @@ source $DOTFILES/zsh/environment
 # Enable syntax highlighting
 source $DOTFILES/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# Update dotfiles regularly
+[ -f $DOTFILES/.dotfiles-update ] && source $DOTFILES/.dotfiles-update
+zsh -f $DOTFILES/update.sh
+
 # Finally, show me a dadjoke when I open a shell
 dadjoke
