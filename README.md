@@ -55,4 +55,5 @@ Go make yourself a mimosa and get crackin' on a find-and-replace throughout a fe
 - `zsh/aliases`: `tdnotes="vim /Users/hawkins/Documents/notes.txt"`
 - `zsh/config`: `PATH=...`
 - `update.sh`: Banner printed on update (see comment there)
+- `vimrc`: Various paths
 - There might be more but frankly I'll probably be Josh Hawkins for a very very long time so I'm not going to keep this list up to date, so you can just sip on that mimosa and run `grep hawkins -r *`

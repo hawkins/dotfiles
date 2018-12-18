@@ -373,6 +373,17 @@ let g:rustfmt_command = "rustfmt"
 autocmd BufNewFile,BufRead *.rs set syntax=rust " Associate *.rs files with rust
 autocmd Filetype rust setlocal ts=4 sts=4 sw=4  " Override global indentation settings
 
+Plugin 'racer-rust/vim-racer'
+
+let g:racer_cmd = "/Users/hawkins/.cargo/bin/racer"
+let g:racer_experimental_completer = 1
+
+autocmd FileType rust nmap gd <Plug>(rust-def)
+autocmd FileType rust nmap <C-]> <Plug>(rust-def)
+autocmd FileType rust nmap gs <Plug>(rust-def-split)
+autocmd FileType rust nmap gx <Plug>(rust-def-vertical)
+autocmd FileType rust nmap <leader>gd <Plug>(rust-doc)
+
 """"""""""
 "        "
 " Vundle "
