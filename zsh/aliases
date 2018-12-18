@@ -38,16 +38,11 @@ stop() {
 }
 alias stfu=stop
 
-# Generates a random cowsay character
-# TODO: One of these is not a valid cow?
-function cowsay_random {
-  cows=(`cowsay -l | grep -v '/'`)
-  cow=${cows[$RANDOM % ${#cows[@]} ]}
-  cowsay -n -f $cow "$@"
-}
-
 # Give me a dad joke! :D
 function dadjoke {
-  curl https://icanhazdadjoke.com/ --silent | cowsay_random
+  curl https://icanhazdadjoke.com/ --silent
+}
+function dadjoke_cowsay {
+  cowsay -n -r $(dadjoke)
 }
 
