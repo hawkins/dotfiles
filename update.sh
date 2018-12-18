@@ -47,13 +47,12 @@ function _upgrade_dotfiles() {
   else
     printf "${RED}%s${NORMAL}\n" 'There was an error updating. Do you have any unstaged changes?'
   fi
+  _update_dotfiles_update
 }
 
-epoch_target=$UPDATE_DOTFILES_DAYS
-if [[ -z "$epoch_target" ]]; then
-  # Default to old behavior
-  epoch_target=$((3 * 86400))
-fi
+# Default to 7 days if not specified
+epoch_target=${UPDATE_DOTFILES_DAYS:-7}
+epoch_target=$((epoch_target * 86400))
 
 # Cancel upgrade if the current user doesn't have write permissions
 [[ -w "$DOTFILES" ]] || return 0

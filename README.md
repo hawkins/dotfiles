@@ -11,7 +11,9 @@ There's plenty of popcorn to go around.
 
 TODO. Hehe :slightly_smiling_face:
 
-- `dadjoke` in `.zshrc`:
+- Auto update every **7** days
+  - Configurable via `$UPDATE_DOTFILES_DAY` - set this to some number in your `zsh/config`
+- `dadjoke` in `zsh/aliases`:
   - Gives you a random dadjoke every time you open a shell
     ```
      ___________________________________________________________________________________
@@ -38,9 +40,11 @@ To install these, I include a simple `install.sh` script to just symlink them to
 
 Other things you need include:
 
-- rbenv
+- vundle
+- rvm
 - oh-my-zsh
 - node
+- rustup
 - npm i -g cowsay
 
 And I warned you that I didn't tailor these dotfiles for anyone but me - so unless you go by `hawkins`, you're gonna have a bad time.
@@ -50,4 +54,5 @@ Go make yourself a mimosa and get crackin' on a find-and-replace throughout a fe
 - `gitconfig`: `name = Josh Hawkins`
 - `zsh/aliases`: `tdnotes="vim /Users/hawkins/Documents/notes.txt"`
 - `zsh/config`: `PATH=...`
+- `update.sh`: Banner printed on update (see comment there)
 - There might be more but frankly I'll probably be Josh Hawkins for a very very long time so I'm not going to keep this list up to date, so you can just sip on that mimosa and run `grep hawkins -r *`

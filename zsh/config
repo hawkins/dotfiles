@@ -18,6 +18,9 @@ source $DOTFILES/zsh/environment
 source $DOTFILES/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Update dotfiles regularly
+#   0 for on every shell
+#   1.. for every N days
+#export UPDATE_DOTFILES_DAYS=7
 [ -f $DOTFILES/.dotfiles-update ] && source $DOTFILES/.dotfiles-update
 zsh -f $DOTFILES/update.sh
 
