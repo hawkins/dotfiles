@@ -23,7 +23,6 @@ set number                     " Show line numbers on left of screen
 set showcmd                    " Show last command in last line of screen
 set visualbell                 " Show a visible indicator instead of an audible beep
 set hidden                     " Hide buffers instead of closing them
-set lazyredraw                 " Don't redraw while executing macros, registers, etc
 set foldlevelstart=999         " Start with all folds expanded
 set backspace=indent,eol,start " Enable backspace in insert mode to modify past session content
 
