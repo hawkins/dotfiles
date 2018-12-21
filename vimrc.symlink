@@ -210,7 +210,18 @@ nmap <leader>\f :NERDTreeFocus<CR>
 
 " Show hidden / dot files by default
 let NERDTreeShowHidden=1
-" TODO: Not totally related, but look into NERDCommenter
+
+"""""""""""""""""""""""""
+" NERDCommenter         "
+"                       "
+" Quickly comment code  "
+"""""""""""""""""""""""""
+
+Plugin 'scrooloose/nerdcommenter'
+
+" Atom-like control-slash comment toggle
+" TODO: Why is this not invoked? <C-p> and similar work, but not slash?
+map <C-/> :call NERDComment(0, "toggle")<CR>
 
 """"""""""""""""""""
 " Git / git-gutter "
