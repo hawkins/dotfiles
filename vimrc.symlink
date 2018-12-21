@@ -370,7 +370,8 @@ let g:rustfmt_autosave = 1                      " Enable rustfmt
 let g:rustfmt_command = "rustfmt"
 
 autocmd BufNewFile,BufRead *.rs set syntax=rust " Associate *.rs files with rust
-autocmd Filetype rust setlocal ts=4 sts=4 sw=4  " Override global indentation settings
+autocmd FileType rust setlocal ts=4 sts=4 sw=4  " Override global indentation settings
+autocmd FileType rust nmap ra :RustFmt<CR>
 
 Plugin 'racer-rust/vim-racer'
 
