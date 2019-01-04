@@ -127,7 +127,8 @@ nnoremap <C-l> <C-W>l
 Plugin 'hawkins/Touchdown.vim'
 "Plugin 'file:///Users/hawkins/git/Touchdown.vim'
 
-" TODO: Don't map indent/outdent
+" Don't map indent/outdent
+let g:touchdown__no_indent = 1
 
 " tpope/vim-markdown - markdown syntax and more
 " Recommended with hawkins/Touchdown.vim
