@@ -293,3 +293,11 @@ set -g mouse on
 
 # move status line to top
 #set -g status-position top
+
+# rename windows
+bind -r C-r command-prompt "rename-window '%%'"
+
+# quickly switch panes
+set -g pane-base-index 1
+set -g display-panes-time 2000 # 2 seconds
+# remember display-panes is on prefix-q
