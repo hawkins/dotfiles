@@ -17,6 +17,10 @@ source $DOTFILES/zsh/environment
 # Enable syntax highlighting
 source $DOTFILES/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# Set up pyenv
+source $(pyenv root)/completions/pyenv.zsh
+eval "$(pyenv init -)"
+
 # Update dotfiles regularly
 #   0 for on every shell
 #   1.. for every N days
