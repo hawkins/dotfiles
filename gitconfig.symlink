@@ -12,3 +12,5 @@
 	trustExitCode = false
 [rerere]
 	enabled = true
+[core]
+	excludesfile = ~/.gitignore
