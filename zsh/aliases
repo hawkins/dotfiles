@@ -32,9 +32,12 @@ alias vimf='vimfzf'
 
 # Kill TCP ports more easily on my mac
 # Usage: stop 3000
-# TODO: Print usage if $1 is empty
 stop() {
-  lsof -t -i tcp:$1 | xargs kill
+  if [[ $@ -eq 0 ]]; then
+    echo "Usage: stop <TCP_PORT>"
+  else
+    lsof -t -i tcp:$1 | xargs kill
+  fi
 }
 alias stfu=stop
 
