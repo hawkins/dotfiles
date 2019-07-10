@@ -19,6 +19,7 @@ Plugin 'VundleVim/Vundle.vim' " Let Vundle manage itself
 " General "
 """""""""""
 
+set undofile                   " Persistent undo/redo history
 set number                     " Show line numbers on left of screen
 set showcmd                    " Show last command in last line of screen
 set visualbell                 " Show a visible indicator instead of an audible beep
