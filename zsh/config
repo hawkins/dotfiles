@@ -29,5 +29,5 @@ eval "$(pyenv init -)"
 zsh -f $DOTFILES/update.sh
 
 # Finally, show me a dadjoke when I open a shell
-dadjoke_cowsay
+#dadjoke_cowsay
 
