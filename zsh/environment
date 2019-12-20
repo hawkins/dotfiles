@@ -49,3 +49,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 # Jetbrains
 export PATH="$PATH:$DOTFILES/jetbrains"
+
+# VS Code
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
