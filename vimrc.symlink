@@ -119,6 +119,16 @@ nnoremap <C-l> <C-W>l
 "         "
 """""""""""
 
+""""""""""""""""
+" Solarized    "
+"              "
+" Color scheme "
+""""""""""""""""
+
+Plugin 'altercation/vim-colors-solarized'
+let g:solarized_termtrans = 1
+set background=dark
+
 """""""""""""""""""""""""""""""""""""
 " Touchdown - my minimal note taker "
 "                                   "
@@ -408,3 +418,10 @@ autocmd FileType rust nmap <leader>gd <Plug>(rust-doc)
 call vundle#end()
 filetype plugin indent on
 
+""""""""""""""""""
+" Final settings "
+""""""""""""""""""
+
+" Apply color scheme
+colorscheme solarized
+highlight LineNr ctermfg=brown
