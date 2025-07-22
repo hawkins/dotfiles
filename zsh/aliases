@@ -7,7 +7,6 @@ alias tdnotes="vim /Users/hawkins/Documents/notes.txt"
 # alias logout="sudo pkill -KILL -u hawkins"
 
 # Git
-alias git="hub"
 #alias "git create"="sudo hub create"
 alias "thrust"="git push -f"
 #alias up="git add -up"

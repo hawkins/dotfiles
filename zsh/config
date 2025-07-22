@@ -28,6 +28,3 @@ eval "$(pyenv init -)"
 [ -f $DOTFILES/.dotfiles-update ] && source $DOTFILES/.dotfiles-update
 zsh -f $DOTFILES/update.sh
 
-# Finally, show me a dadjoke when I open a shell
-#dadjoke_cowsay
-
