@@ -2,3 +2,4 @@ jetbrains/*
 .dotfiles-update
 *.swp
 *.swo
+*api_key*
