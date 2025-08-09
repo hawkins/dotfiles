@@ -204,17 +204,19 @@ map <C-f> :FZF<CR>
 
 Plugin 'scrooloose/nerdtree'
 
-" Open NERDTree when no files are specified
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-" ... or a directory is opened
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd c | endif
+if !has("nvim")
+  " Open NERDTree when no files are specified
+  autocmd StdinReadPre * let s:std_in=1
+  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+  " ... or a directory is opened
+  autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd c | endif
 
-nmap <leader>\t :NERDTreeToggle<CR>
-nmap <leader>\f :NERDTreeFocus<CR>
+  nmap <leader>\t :NERDTreeToggle<CR>
+  nmap <leader>\f :NERDTreeFocus<CR>
 
-" Show hidden / dot files by default
-let NERDTreeShowHidden=1
+  " Show hidden / dot files by default
+  let NERDTreeShowHidden=1
+endif
 
 """""""""""""""""""""""""
 " NERDCommenter         "
