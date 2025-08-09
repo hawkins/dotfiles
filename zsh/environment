@@ -1,6 +1,5 @@
 # zsh/environment
-
-eval $(ssh-agent) &>/dev/null
+eval $(ssh-agent -s) &>/dev/null
 
 # npm
 export PATH=${PATH}:$(npm config get prefix)/bin
