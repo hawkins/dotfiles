@@ -4,6 +4,9 @@
 # Load the default profile
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
 
+# Arch
+export PATH="/usr/local/bin:/usr/bin:/var/lib/flatpak/exports/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$PATH"
+# Mac
 # TODO: Clean up this hellish path
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/Users/hawkins/Documents/Games:/usr/local/texlive/2017/bin/x86_64-darwin:/usr/local/go/bin:/usr/local/go:/opt/metasploit-framework/bin:/Users/hawkins/go/src/github.com/huydx/hget/bin:$PATH"
 
@@ -18,8 +21,11 @@ source $DOTFILES/zsh/environment
 source $DOTFILES/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Set up pyenv
-#source $(pyenv root)/completions/pyenv.zsh
-eval "$(pyenv init -)"
+if command -v pyenv &>/dev/null
+then
+	#source $(pyenv root)/completions/pyenv.zsh
+	eval "$(pyenv init -)"
+fi
 
 # Update dotfiles regularly
 #   0 for on every shell

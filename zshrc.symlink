@@ -96,7 +96,7 @@ source $DOTFILES/zsh/config
 export PATH="$PATH:$HOME/.rvm/bin"
 
 # If Gemini AI is configured, load the keys
-if [ -f gemini_api_key.sh ] source gemini_api_key.sh
+[ -f gemini_api_key.sh ] && source gemini_api_key.sh
 
 
 # Run fastfetch on terminal open.
@@ -109,3 +109,4 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
+
