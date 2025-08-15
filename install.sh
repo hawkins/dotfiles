@@ -26,10 +26,27 @@ function strip() {
 }
 
 # Symlink all files and folders whose name ends with `.symlink`
-files=($(find . -name '*.symlink' -print | sed s/\.\.//))
+# Symlink all files and folders whose name ends with `.symlink`
+files=($(find . -name '*.symlink' -print | sed s/\.\.\//))
 for i in "${files[@]}"
 do
-  link $i $(strip $i)
+  if [ "$i" = "config.symlink" ]; then
+    if [ -d "$HOME/.config" ] && [ ! -L "$HOME/.config" ]; then
+      echo "Linking contents of config.symlink to ~/.config"
+      for config_item in "$DOTFILES/config.symlink/"*; do
+        config_item_name=$(basename "$config_item")
+        if [ -d "$HOME/.config/$config_item_name" ] && [ ! -L "$HOME/.config/$config_item_name" ]; then
+          echo "Warning: ~/.config/$config_item_name already exists and is a directory. Not linking."
+        else
+          ln -sfn "$config_item" "$HOME/.config/$config_item_name" && echo "Linked config.symlink/$config_item_name to ~/.config/$config_item_name"
+        fi
+      done
+    else
+      link "$i" "$(strip "$i")"
+    fi
+  else
+    link "$i" "$(strip "$i")"
+  fi
 done
 
 # Link special purpose files
