@@ -17,9 +17,6 @@ source $DOTFILES/zsh/environment
 # Add fzf keybindings
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Enable syntax highlighting
-source $DOTFILES/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # Set up pyenv
 if command -v pyenv &>/dev/null
 then
