@@ -5,6 +5,11 @@ eval $(ssh-agent -s) &>/dev/null
 [ -f /usr/share/nvm/init-nvm.sh ] && . /usr/share/nvm/init-nvm.sh
 export PATH=${PATH}:$(npm config get prefix)/bin
 
+# Gemini
+# If Gemini AI is configured, load the keys
+[ -f $HOME/gemini_api_key.sh ] && source $HOME/gemini_api_key.sh
+
+
 # Rust
 [ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
 # https://github.com/rust-lang-nursery/rustfmt/issues/1707#issuecomment-310005652
