@@ -30,6 +30,7 @@ Other things you need include:
 - node
 - rustup
 - neovim
+- fastfetch
 
 And I warned you that I didn't tailor these dotfiles for anyone but me - so unless you go by `hawkins`, you're gonna have a bad time.
 You'll need to do a find and replace for my name to sort that, have fun.
