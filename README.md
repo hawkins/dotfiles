@@ -24,7 +24,8 @@ To install these, I include a simple `install.sh` script to just symlink them to
 
 Other things you need include:
 
-- vundle
+- stow
+- vundle (if using vim)
 - rvm
 - oh-my-zsh
 - node

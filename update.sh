@@ -35,6 +35,9 @@ function _upgrade_dotfiles() {
   cd "$DOTFILES"
   if git pull --rebase --stat origin master
   then
+    # Link any new files
+    stow .
+
     # Text from http://www.patorjk.com/software/taag/#p=display&h=0&f=Sub-Zero&t=hawkins
     printf '%s' "$GREEN"
     printf '%s\n' ' __  __     ______     __     __     __  __     __     __   __     ______   '
