@@ -17,6 +17,8 @@ ln -fn $DOTFILES/zsh/zeit.zsh-theme ~/.oh-my-zsh/themes/zeit.zsh-theme && echo "
 
 # Actually link the rest of the files
 stow .
+# If this errors, you may want to actually bring in the existing files your box already has with:
+# stow . --adopt
 
 # Finally, prepare the shell with new dotfiles
 source ~/.zshrc
