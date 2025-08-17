@@ -1,6 +1,9 @@
 # zsh/aliases
 # For a full list of active aliases, run `alias`.
 
+# I can't stand typing this word because my brain is small
+alias dotfiles="chezmoi"
+
 # Set-up icons for files/directories in terminal using lsd
 # hyperlinks thanks to kitty
 alias ls='lsd --hyperlink=auto'

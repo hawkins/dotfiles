@@ -3,3 +3,7 @@ jetbrains/*
 *.swp
 *.swo
 *api_key*
+.*.un~
+
+.config/*
+

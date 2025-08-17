@@ -24,6 +24,10 @@ then
 	eval "$(pyenv init -)"
 fi
 
+# If Gemini AI is configured, load the keys
+[ -f gemini_api_key.sh ] && source gemini_api_key.sh
+
+
 # Update dotfiles regularly
 #   0 for on every shell
 #   1.. for every N days

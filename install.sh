@@ -1,4 +1,14 @@
 #!/bin/zsh
+#
+#!/bin/bash
+
+current_dir_name=$(basename "$(pwd)")
+target_dir_name="chezmoi"  # I think this should always be installed from inside the dir
+if [ "$current_dir_name" != "$target_dir_name" ]; then
+    echo "Be sure you ran these commands first:"
+    echo "\tchezmoi init --apply hawkins"
+    echo "\tcd ~/.local/share/chezmoi"
+fi
 
 # Generate dotfiles_config
 DOTFILES=$(pwd)
@@ -8,49 +18,20 @@ echo "# Run dotfiles/install.sh to repair this.     #" >> ~/.dotfiles_config
 echo "###############################################" >> ~/.dotfiles_config
 echo "export DOTFILES=$DOTFILES" >> ~/.dotfiles_config
 
-# Handle submodules before we do anything else
-git submodule update --init --recursive
 
-# Link $1 to ~/.$2
-# Notice this adds the "." prefix
-function link() {
-  ln -sfn $DOTFILES/$1 ~/.$2 && echo "Linked $1 to ~/.$2"
-}
-
-# Reformat name from its friendly name
-function strip() {
-  local file=$(basename $1)
-  local file="${file#.}"
-  local file="${file%.symlink}"
-  echo $file
-}
-
-# Symlink all files and folders whose name ends with `.symlink`
-# Symlink all files and folders whose name ends with `.symlink`
-files=($(find . -name '*.symlink' -print | sed s/\.\.\//))
-for i in "${files[@]}"
-do
-  if [ "$i" = "config.symlink" ]; then
-    if [ -d "$HOME/.config" ] && [ ! -L "$HOME/.config" ]; then
-      echo "Linking contents of config.symlink to ~/.config"
-      for config_item in "$DOTFILES/config.symlink/"*; do
-        config_item_name=$(basename "$config_item")
-        if [ -d "$HOME/.config/$config_item_name" ] && [ ! -L "$HOME/.config/$config_item_name" ]; then
-          echo "Warning: ~/.config/$config_item_name already exists and is a directory. Not linking."
-        else
-          ln -sfn "$config_item" "$HOME/.config/$config_item_name" && echo "Linked config.symlink/$config_item_name to ~/.config/$config_item_name"
-        fi
-      done
-    else
-      link "$i" "$(strip "$i")"
-    fi
-  else
-    link "$i" "$(strip "$i")"
-  fi
-done
+# Seriously, never submodules
+git clone git@github.com:hawkins/kickstart.nvim.git ~/.config/nvim
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+curl https://raw.githubusercontent.com/zakaziko99/agnosterzak-ohmyzsh-theme/master/agnosterzak.zsh-theme > ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/agnosterzak.zsh-theme
 
 # Link special purpose files
 ln -fn $DOTFILES/zsh/zeit.zsh-theme ~/.oh-my-zsh/themes/zeit.zsh-theme && echo "Installed ZSH Theme: Zeit"
+
+
+# Make the user run this separately because it's scary to overwrite dotfiles the first time
+echo "Reporting status. If there's no changes, you're safe to run `chezmoi apply` yourself."
+chezmoi status
 
 # Finally, prepare the shell with new dotfiles
 source ~/.zshrc
