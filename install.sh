@@ -8,8 +8,9 @@ echo "# Run dotfiles/install.sh to repair this.     #" >> ~/.dotfiles_config
 echo "###############################################" >> ~/.dotfiles_config
 echo "export DOTFILES=$DOTFILES" >> ~/.dotfiles_config
 
-# Handle submodules before we do anything else
-git submodule update --init --recursive
+
+# Seriously, never submodules
+git clone git@github.com:hawkins/kickstart.nvim.git $DOTFILES/.config/nvim
 
 # Link special purpose files
 ln -fn $DOTFILES/zsh/zeit.zsh-theme ~/.oh-my-zsh/themes/zeit.zsh-theme && echo "Installed ZSH Theme: Zeit"

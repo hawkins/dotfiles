@@ -4,3 +4,5 @@ jetbrains/*
 *.swo
 *api_key*
 .*.un~
+
+.config/nvim
