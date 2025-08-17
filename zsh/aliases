@@ -2,7 +2,7 @@
 # For a full list of active aliases, run `alias`.
 
 # I can't stand typing this word because my brain is small
-alias chezmoi="dotfiles"
+alias dotfiles="chezmoi"
 
 # Set-up icons for files/directories in terminal using lsd
 alias ls='lsd --hyperlink=auto'
