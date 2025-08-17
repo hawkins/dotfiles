@@ -6,3 +6,7 @@ jetbrains/*
 .*.un~
 
 .config/nvim
+.config/discord
+.config/Bitwarden
+.config/swaync.bak
+.config/hypr_backup
