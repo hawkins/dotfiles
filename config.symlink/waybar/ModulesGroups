@@ -102,8 +102,8 @@
 		"transition-left-to-right": false
         },
 	"modules": [
-		"custom/swaync",
-		"custom/dot_update",
+		"custom/swaync"
+		//"custom/dot_update",
 	]
 },
 
