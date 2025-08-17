@@ -11,6 +11,10 @@ echo "export DOTFILES=$DOTFILES" >> ~/.dotfiles_config
 
 # Seriously, never submodules
 git clone git@github.com:hawkins/kickstart.nvim.git $DOTFILES/.config/nvim
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+curl https://raw.githubusercontent.com/zakaziko99/agnosterzak-ohmyzsh-theme/master/agnosterzak.zsh-theme > ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/agnosterzak.zsh-theme
+
 
 # Link special purpose files
 ln -fn $DOTFILES/zsh/zeit.zsh-theme ~/.oh-my-zsh/themes/zeit.zsh-theme && echo "Installed ZSH Theme: Zeit"
