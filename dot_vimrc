@@ -1,0 +1,415 @@
+""""""""""
+" Vundle "
+""""""""""
+
+" Note: These settings are required and come from the Vundle readme
+set nocompatible              " We're not in Vi anymore
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim' " Let Vundle manage itself
+
+""""""""""""
+"          "
+" Settings "
+"          "
+""""""""""""
+
+"""""""""""
+" General "
+"""""""""""
+
+set undofile                   " Persistent undo/redo history
+set number                     " Show line numbers on left of screen
+set showcmd                    " Show last command in last line of screen
+set visualbell                 " Show a visible indicator instead of an audible beep
+set hidden                     " Hide buffers instead of closing them
+set foldlevelstart=999         " Start with all folds expanded
+set backspace=indent,eol,start " Enable backspace in insert mode to modify past session content
+
+" Timeouts for handling input and waiting to determine if there is a mapping or not at that key command
+set notimeout
+set ttimeout
+set ttimeoutlen=200
+
+" TODO: I use this in other configs, but do I really want to keep it here?
+set nostartofline
+
+syntax enable                  " Syntax highlighting but don't override color scheme
+
+" Reopen last position in file upon opening (" mark)
+autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") && expand('%:tail') != "COMMIT_EDITMSG" | exe "normal! g`\"" | endif
+
+""""""""""""""
+" Whitespace "
+""""""""""""""
+
+" Note: indentation may be overriden per-language below
+
+set autoindent         " Copy indent from current line when starting a new line
+set smartindent        " C-like-langs auto indenting after { and 'cinwords'
+set smarttab           " Change how Tab and Backspace behave
+set expandtab          " Expand tab into appropriate number of spaces
+set softtabstop=2      " Number of spaces a Tab counts for when editing, like inserting a Tab or using Backspace
+set tabstop=2          " Number of spaces a Tab in the file counts for
+set shiftwidth=2       " Number of spaces to use for each step of (auto)indent (>>, <<, cindent, etc)
+set nowrap             " Wrap lines on screen (not buffer)?
+set textwidth=0        " Don't break lines to reach any particular width
+set wrapmargin=0       " Combined with textwidth=0 to prevent line breaks while editing
+set listchars=tab:__,trail:.,extends:>
+set list               " Show invisibles according to 'listchars' value
+
+function! <SID>StripTrailingWhitespace()
+  " Draw two circles
+  let _s = @/
+  let l = line(".")
+  let c = col(".")
+  " Draw the rest of the owl
+  %s/\s\+$//e
+  let @/ = _s
+  call cursor(l,c)
+endfunction
+autocmd BufWritePre * :call <SID>StripTrailingWhitespace()
+
+"""""""""""""
+" Scrolling "
+"""""""""""""
+
+set scrolloff=8        " Minimal number of lines to keep above and below the cursor
+set sidescroll=1       " Minimal number of columns to scroll horizontally (wrap must be off)
+set sidescrolloff=15   " Minimal number of characters to keep to the left and right of cursor
+
+""""""""""
+" Search "
+""""""""""
+
+" Note: The easymotion section below is also very relevant to search
+
+set incsearch          " Incrementally apply the pattern as you type to show results in real-time
+set ignorecase         " Case insensitive patterns by default
+set smartcase          " Case sensitive patterns when you type an uppercase letter
+set hlsearch           " Highlight previous search patterns
+" But hide the highlights when we want to
+map <Leader>/ :nohlsearch<CR>
+
+""""""""""""""""""
+"                "
+" Misc. Mappings "
+"                "
+""""""""""""""""""
+
+" Copy/Paste
+" See https://vi.stackexchange.com/a/96/19747
+" * - PRIMARY   (copy-on-select)
+" + - CLIPBOARD (^C,^V, MS Windows-like)
+noremap <Leader>y "+y
+noremap <Leader>p "+p
+"noremap <Leader>Y "*y
+"noremap <Leader>P "*p
+
+" Window movement
+nnoremap <C-h> <C-W>h
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-l> <C-W>l
+
+"""""""""""
+"         "
+" Plugins "
+"         "
+"""""""""""
+
+"""""""""""""""""""""""""""""""""""""
+" Touchdown - my minimal note taker "
+"                                   "
+" Primarily used for Markdown files "
+"""""""""""""""""""""""""""""""""""""
+
+Plugin 'hawkins/Touchdown.vim'
+"Plugin 'file:///Users/hawkins/git/Touchdown.vim'
+
+" Don't map indent/outdent
+let g:touchdown__no_indent = 1
+
+" tpope/vim-markdown - markdown syntax and more
+" Recommended with hawkins/Touchdown.vim
+" I forked vim-markdown to change list depth limits
+Plugin 'hawkins/vim-markdown'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" EasyMotion - makes moving around files easier "
+"                                               "
+" I mainly use this for searching               "
+"""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Neovim uses folke/flash.nvim instead
+if !has("nvim")
+  Plugin 'easymotion/vim-easymotion'
+  " <Leader>f{char} to move to {char}
+  map  <Leader>f <Plug>(easymotion-bd-f)
+  nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+  " s{char}{char} to move to {char}{char}
+  nmap s <Plug>(easymotion-overwin-f2)
+
+  " Move to line
+  map <Leader>L <Plug>(easymotion-bd-jk)
+  nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+  " Move to word
+  map  <Leader>w <Plug>(easymotion-bd-w)
+  nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+  " / to search with easymotion
+  map  / <Plug>(easymotion-sn)
+  omap / <Plug>(easymotion-tn)
+endif
+
+" tpope/vim-repeat - required to enable dot repeat support
+Plugin 'tpope/vim-repeat'
+" Jump to anywhere with only `s{char}{target}`
+" `s<CR>` repeat last find motion.
+nmap s <Plug>(easymotion-s)
+" Bidirectional & within line 't' motion
+omap t <Plug>(easymotion-bd-tl)
+" Use uppercase target labels and type as a lower case
+let g:EasyMotion_use_upper = 1
+ " type `l` and match `l`&`L`
+let g:EasyMotion_smartcase = 1
+" Smartsign (type `3` and match `3`&`#`)
+let g:EasyMotion_use_smartsign_us = 1
+
+" These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
+" Without these mappings, `n` & `N` works fine. (These mappings just provide
+" different highlight method and have some other features )
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
+
+
+""""""""""""""""""""
+" FuzzyFinder fzf  "
+"                  "
+" Search for files "
+""""""""""""""""""""
+
+set rtp+=~/.fzf
+map <C-f> :FZF<CR>
+
+
+"""""""""""""""""""""""""""
+" NERDTree                "
+"                         "
+" File tree as a side bar "
+"""""""""""""""""""""""""""
+
+Plugin 'scrooloose/nerdtree'
+
+if !has("nvim")
+  " Open NERDTree when no files are specified
+  autocmd StdinReadPre * let s:std_in=1
+  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+  " ... or a directory is opened
+  autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd c | endif
+
+  nmap <leader>\t :NERDTreeToggle<CR>
+  nmap <leader>\f :NERDTreeFocus<CR>
+
+  " Show hidden / dot files by default
+  let NERDTreeShowHidden=1
+endif
+
+"""""""""""""""""""""""""
+" NERDCommenter         "
+"                       "
+" Quickly comment code  "
+"""""""""""""""""""""""""
+
+Plugin 'scrooloose/nerdcommenter'
+
+" Atom-like control-slash comment toggle
+" TODO: Why is this not invoked? <C-p> and similar work, but not slash?
+map <C-/> :call NERDComment(0, "toggle")<CR>
+
+""""""""""""""""""""
+" Git / git-gutter "
+""""""""""""""""""""
+
+Plugin 'airblade/vim-gitgutter'
+
+" Vimdiff aka git mergetool
+if &diff
+  " Show where we are
+  set cursorline
+  " Jump to next/previous differences
+  map ] ]c
+  map [ [c
+endif
+
+""""""""""""""""""""""""""""""""""""""""""""
+" Prettier                                 "
+"                                          "
+" Autoformats languages based on their AST "
+""""""""""""""""""""""""""""""""""""""""""""
+
+Plugin 'prettier/vim-prettier'
+
+" Note: This also maps :Prettier to <Leader>p
+
+" To enable vim-prettier to run in files without requiring the '@format' doc
+" tag, first disable the default autoformat, then update to your own custom
+" behaviour
+let g:prettier#autoformat = 1
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
+
+let g:prettier#exec_cmd_path =
+      \"/usr/local/bin/prettier"       " Avoid using projects local prettier versions
+let g:prettier#quickfix_enabled = 1    " Parsing errors open quickfix window?
+let g:prettier#quickfix_auto_focus = 1 " Autofocus the quickfix window when it opens?
+
+" max line length that prettier will wrap on
+" Prettier default: 80
+" let g:prettier#config#print_width = 80
+
+" number of spaces per indentation level
+" Prettier default: 2
+" let g:prettier#config#tab_width = 2
+
+" use tabs over spaces
+" Prettier default: false
+" let g:prettier#config#use_tabs = 'false'
+
+" print semicolons
+" Prettier default: true
+" let g:prettier#config#semi = 'true'
+
+" single quotes over double quotes
+" Prettier default: false
+" Vim-Prettier default: true
+let g:prettier#config#single_quote = 'false'
+
+" print spaces between brackets
+" Prettier default: true
+" Vim-Prettier default: false
+let g:prettier#config#bracket_spacing = 'true'
+
+" put > on the last line instead of new line
+" Prettier default: false
+" Vim-Prettier default: true
+let g:prettier#config#jsx_bracket_same_line = 'false'
+
+" avoid|always
+" Prettier default: avoid
+" Vim-Prettier default: always
+let g:prettier#config#arrow_parens = 'avoid'
+
+" none|es5|all
+" Prettier default: none
+" Vim-Prettier default: all
+let g:prettier#config#trailing_comma = 'none'
+
+" flow|babylon|typescript|css|less|scss|json|graphql|markdown
+" Prettier default: babylon
+" Vim-Prettier default: flow
+let g:prettier#config#parser = 'babylon'
+
+" cli-override|file-override|prefer-file
+" let g:prettier#config#config_precedence = 'prefer-file'
+
+" always|never|preserve
+" let g:prettier#config#prose_wrap = 'preserve'
+
+""""""""""""""""""""""""""""""""""""""""""""
+"                                          "
+" Language-specific Settings and Plugins   "
+"                                          "
+" The following blocks are configuring Vim "
+" for specific programming languages       "
+" and related tools                        "
+"                                          "
+""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""
+" C/C++ "
+"""""""""
+
+" TODO: What do these provide again?
+Plugin 'c.vim'
+"Plugin 'rip-rip/clang_complete'
+
+" rhysd/vim-clang-format - Clang autoformatting
+Plugin 'rhysd/vim-clang-format'
+autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
+nmap <Leader>C :ClangFormatAutoToggle<CR>
+autocmd FileType c ClangFormatAutoEnable
+
+" if you install vim-operator-user
+" autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
+
+""""""""""""""
+" JavaScript "
+""""""""""""""
+
+" I write a lot of React code with JSX, so I'll assume all JS is actually JSX
+" TODO: Is this necessary since how we initialize mxw/vim-jsx below says to not require .jsx?
+autocmd BufNewFile,BufRead *.js set filetype=javascript.jsx
+
+" pangloss/vim-javascript - JS syntax & indentation
+Plugin 'pangloss/vim-javascript'
+let g:javascript_plugin_jsdoc = 1 " JSDoc comments
+let g:javascript_plugin_flow = 1  " Flow types
+
+" mxw/vim-jsx - JSX syntax & indentation
+Plugin 'mxw/vim-jsx'
+let g:jsx_ext_required = 0        " *.js == JSX
+
+""""""""""""""""
+" Ruby / Rails "
+""""""""""""""""
+
+Plugin 'tpope/vim-rails'
+
+" RuboCop - linter for Ruby
+" I forked it to make some UI changes
+"Plugin 'file:///Users/hawkins/git/vim-rubocop'
+Plugin 'hawkins/vim-rubocop'
+
+autocmd FileType ruby nmap rr :RuboCop<CR>
+autocmd FileType ruby nmap ra :RuboCop --auto-correct<CR>
+autocmd FileType ruby nmap rs :RuboCopShow<CR>
+
+""""""""
+" Rust "
+""""""""
+
+Plugin 'rust-lang/rust.vim'
+
+let g:rustfmt_autosave = 1                      " Enable rustfmt
+let g:rustfmt_command = "rustfmt"
+
+autocmd BufNewFile,BufRead *.rs set syntax=rust " Associate *.rs files with rust
+autocmd FileType rust setlocal ts=4 sts=4 sw=4  " Override global indentation settings
+autocmd FileType rust nmap ra :RustFmt<CR>
+
+Plugin 'racer-rust/vim-racer'
+
+let g:racer_cmd = "/Users/hawkins/.cargo/bin/racer"
+let g:racer_experimental_completer = 1
+
+autocmd FileType rust nmap gd <Plug>(rust-def)
+autocmd FileType rust nmap <C-]> <Plug>(rust-def)
+autocmd FileType rust nmap gs <Plug>(rust-def-split)
+autocmd FileType rust nmap gx <Plug>(rust-def-vertical)
+autocmd FileType rust nmap <leader>gd <Plug>(rust-doc)
+
+""""""""""
+"        "
+" Vundle "
+"        "
+""""""""""
+
+" Note: No more plugins can be initialized after this point
+
+call vundle#end()
+filetype plugin indent on
+
