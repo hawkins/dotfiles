@@ -1,8 +1,11 @@
 # dotfiles
 
 My messy as hell dotfiles I've slapped together over the years.
+Originally for i3 on (Ubuntu?), slowly transitioned to Hyprland on Arch.
+Hyprland is largely stolen from [JaKooLit's](https://github.com/JaKooLit/Arch-Hyprland). Their project is *way* more complete than mine - I simply used it as a starting point then tweaked some settings in theming and brought it into my dotfiles here.
+
 Not usually very generic, tailored to my individual machines, so this really shouldn't be open source.
-But I like a thing or two about it, so here we are!
+Use JaKooLit's if you want similar, you can check my settings later if you want.
 
 Take what you like or don't what you don't.
 
@@ -24,7 +27,7 @@ To install these, I include a simple `install.sh` script to just symlink them to
 
 Other things you need include:
 
-- `stow`
+- `chezmoi`
 - `zsh` with `oh-my-zsh`
 - Vundle (if using vim)
 - `rvm`
