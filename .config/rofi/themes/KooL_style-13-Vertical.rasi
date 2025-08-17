@@ -204,8 +204,8 @@ element normal.active {
 
 element-text selected,
 element selected.normal {
-    background-color:           @active;
-    text-color:                 @foreground;
+    background-color:           @color4;
+    text-color:                 @color13;
 }
 
 element selected.urgent {
