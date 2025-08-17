@@ -1,4 +1,14 @@
 #!/bin/zsh
+#
+#!/bin/bash
+
+current_dir_name=$(basename "$(pwd)")
+target_dir_name="chezmoi"  # I think this should always be installed from inside the dir
+if [ "$current_dir_name" != "$target_dir_name" ]; then
+    echo "Be sure you ran these commands first:"
+    echo "\tchezmoi init --apply hawkins"
+    echo "\tcd ~/.local/share/chezmoi"
+fi
 
 # Generate dotfiles_config
 DOTFILES=$(pwd)
@@ -10,7 +20,7 @@ echo "export DOTFILES=$DOTFILES" >> ~/.dotfiles_config
 
 
 # Seriously, never submodules
-git clone git@github.com:hawkins/kickstart.nvim.git $DOTFILES/.config/nvim
+git clone git@github.com:hawkins/kickstart.nvim.git ~/.config/nvim
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 curl https://raw.githubusercontent.com/zakaziko99/agnosterzak-ohmyzsh-theme/master/agnosterzak.zsh-theme > ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/agnosterzak.zsh-theme
@@ -19,10 +29,10 @@ curl https://raw.githubusercontent.com/zakaziko99/agnosterzak-ohmyzsh-theme/mast
 # Link special purpose files
 ln -fn $DOTFILES/zsh/zeit.zsh-theme ~/.oh-my-zsh/themes/zeit.zsh-theme && echo "Installed ZSH Theme: Zeit"
 
-# Actually link the rest of the files
-stow .
-# If this errors, you may want to actually bring in the existing files your box already has with:
-# stow . --adopt
+
+# Make the user run this separately because it's scary to overwrite dotfiles the first time
+echo "Reporting status. If there's no changes, you're safe to run `chezmoi apply` yourself."
+chezmoi status
 
 # Finally, prepare the shell with new dotfiles
 source ~/.zshrc

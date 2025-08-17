@@ -95,9 +95,6 @@ source $DOTFILES/zsh/config
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-# If Gemini AI is configured, load the keys
-[ -f gemini_api_key.sh ] && source gemini_api_key.sh
-
 
 # Run fastfetch on terminal open.
 fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
