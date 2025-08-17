@@ -13,3 +13,5 @@ backups/   # ignore the backups folder, but not its contents
 backups/** # ignore the contents of backups folder but not the folder itself
 
 zsh     # Ignore zsh/config zsh/aliases etc because these are sourced from $DOTFILES/zsh/config
+.install.sh
+.update.sh
