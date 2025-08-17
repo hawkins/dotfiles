@@ -5,8 +5,5 @@ jetbrains/*
 *api_key*
 .*.un~
 
-.config/nvim
-.config/discord
-.config/Bitwarden
-.config/swaync.bak
-.config/hypr_backup
+.config/*
+
