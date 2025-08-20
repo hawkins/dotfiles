@@ -5,6 +5,9 @@ eval $(ssh-agent -s) &>/dev/null
 [ -f /usr/share/nvm/init-nvm.sh ] && . /usr/share/nvm/init-nvm.sh
 export PATH=${PATH}:$(npm config get prefix)/bin
 
+# Python / uv
+source $HOME/.local/bin/env
+
 # Gemini
 # If Gemini AI is configured, load the keys
 [ -f $HOME/gemini_api_key.sh ] && source $HOME/gemini_api_key.sh
