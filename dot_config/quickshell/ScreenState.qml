@@ -13,7 +13,7 @@ Scope {
 
     property ShellScreen screen
     property bool hasFullscreenWindow: C.Config.settings.panels.compactEnabled && Hyprland.monitorFor(screen).activeWorkspace.hasFullscreen
-    property bool showBar: true
+    property bool showBar: false
 
     B.Bar {
         screen: root.screen

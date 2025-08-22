@@ -15,7 +15,7 @@ import Quickshell.Services.SystemTray
 import "config"
 
 Scope {
-  property bool showBars: true
+  property bool showBars: false
 
   Component.onCompleted: {
     SystemTray; // register a status notifier host as early as possible
