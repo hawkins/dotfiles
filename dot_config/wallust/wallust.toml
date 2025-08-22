@@ -5,3 +5,20 @@ palette = "dark"
 [templates]
 kitty.template = 'kitty-template.conf'
 kitty.target = '~/.config/kitty/wallust.conf'
+#kitty.template = 'colors-kitty.conf'
+#kitty.target = '~/.config/kitty/kitty-themes/01-Wallust.conf'
+
+cava.template = 'colors-cava'
+cava.target = '~/.config/cava/config'
+
+#hypr.template = 'colors-hyprland.conf'
+#hypr.target = '~/.config/hypr/wallust/wallust-hyprland.conf'
+
+rofi.template = 'colors-rofi.rasi'
+rofi.target = '~/.config/rofi/wallust/colors-rofi.rasi'
+
+waybar.template = 'colors-waybar.css'
+waybar.target = '~/.config/waybar/wallust/colors-waybar.css'
+
+#quickshell.template = 'qml_color.json'
+#quickshell.target = '~/.config/quickshell/qml_color.json'
