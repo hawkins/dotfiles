@@ -6,5 +6,9 @@
 /* IMPORTANT, be mindful with , or ". else waybar will not start */
 
 {
-
+	"hyprland/workspaces#rw": {
+		"window-rewrite": {
+			"title<.*runelite.*>": "RL "
+		}
+	}
 }
