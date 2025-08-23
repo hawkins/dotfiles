@@ -28,6 +28,10 @@ output_path = '~/.config/qt6ct/colors/matugen-kde.colors'
 input_path = '~/.config/matugen/templates/walker-template.css'
 output_path = '~/.config/walker/themes/hypr.css'
 
+[templates.walkernew]
+input_path = '~/.config/matugen/templates/walker-new-template.css'
+output_path = '~/.config/walker/themes/hypr/style.css'
+
 [templates.quickshell]
 input_path = '~/.config/matugen/templates/quickshell-template.json'
 output_path = '~/.config/quickshell/matugen.json'
