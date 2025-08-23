@@ -176,7 +176,8 @@ apply_image_wallpaper() {
 
   "$SCRIPTSDIR/Refresh.sh"
 
-  set_sddm_wallpaper
+  # Josh: This is annoying
+  #set_sddm_wallpaper
 }
 
 apply_video_wallpaper() {
