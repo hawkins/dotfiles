@@ -12,6 +12,8 @@ source $HOME/.local/bin/env
 # If Gemini AI is configured, load the keys
 [ -f $HOME/gemini_api_key.sh ] && source $HOME/gemini_api_key.sh
 
+# Go
+export PATH=${PATH}:$(go env GOPATH)/bin
 
 # Rust
 [ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
