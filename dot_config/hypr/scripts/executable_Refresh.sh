@@ -30,7 +30,7 @@ killall -SIGUSR2 waybar
 
 # quit quickshell & relaunch quickshell
 #pkill qs && qs &
-pkill quickshell && quickshell &
+pkill quickshell && quickshell & >/dev/null
 
 # some process to kill
 for pid in $(pidof waybar rofi swaync ags swaybg); do
@@ -39,13 +39,13 @@ done
 
 #Restart waybar
 sleep 1
-waybar &
+waybar & >/dev/null
 
 # relaunch swaync
 sleep 0.5
-swaync > /dev/null 2>&1 &
+#swaync > /dev/null 2>&1 &
 # reload swaync
-swaync-client --reload-config
+swaync-client --reload-config >/dev/null
 
 # Relaunching rainbow borders if the script exists
 sleep 1
