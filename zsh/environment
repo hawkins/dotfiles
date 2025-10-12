@@ -32,6 +32,10 @@ then
 	export PATH=$(brew --prefix openssl)/include:$PATH
 fi
 
+# Brew
+BREW_PREFIX=$(brew --prefix)
+export PATH="$PATH:${BREW_PREFIX}/bin"
+
 # LLVM
 # To use the bundled libc++ please add the following LDFLAGS:
 #export LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
