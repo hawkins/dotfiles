@@ -4,6 +4,8 @@ jetbrains/*
 *.swo
 *api_key*
 .*.un~
+dot_session.vim
+.session.vim
 
 .config/*
 
