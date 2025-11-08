@@ -44,6 +44,7 @@ Singleton {
     }
   }
 
+  /*
   NotificationServer {
     id: notifServer
     persistenceSupported: true
@@ -65,4 +66,5 @@ Singleton {
       root.trackedNotifs = [newNotif, ...root.trackedNotifs];
     }
   }
+  */
 }
