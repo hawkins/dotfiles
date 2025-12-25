@@ -7,9 +7,11 @@
 	force = "!f() { echo \"Use the force wisely, young padawan.\n----"; git $* -f; }; f"
 	multi = "!ls -d */ | xargs -I {} git -C {} $*"
 [merge]
-	tool = vimdiff
+	tool = nvimdiff
 [mergetool]
 	trustExitCode = false
+[mergetool "nvimdiff"]
+  cmd = nvim -d \"$LOCAL\" \"$MERGED\" \"$BASE\" \"$REMOTE\" -c \"wincmd w\" -c \"wincmd J\"
 [rerere]
 	enabled = true
 [core]

@@ -147,6 +147,14 @@
 	"tooltip-format": "Left Click: Logout Menu\nRight Click: Change Blur",
 },
 
+"custom/hyprland-de-menu": {
+	"format": " ",
+	"on-click": "hyprctl dispatch global 'hyprland-shell:rightMenuToggle'",
+	"on-click-right": "hyprctl dispatch global 'hyprland-shell:leftMenuToggle'",
+	"tooltip": true,
+	"tooltip-format": "Left Click: Hyprland-DE Right Menu\nRight Click: Hyprland-DE Left Menun"
+},
+
 "custom/reboot": {
     "format": "󰜉",
     "on-click": "systemctl reboot",

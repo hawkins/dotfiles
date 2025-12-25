@@ -1,26 +1,104 @@
 //@ pragma UseQApplication
-//@ pragma Env QS_NO_RELOAD_POPUP=1
-//@ pragma Env QT_QUICK_CONTROLS_STYLE=Basic
-
-import "./modules/common/"
-import "./modules/overview/"
+//@ pragma IgnoreSystemSettings
+import "./config" as C
+import "./intro" as I
+import "./shortcuts" as SH
+import "./settings" as SE
+import "./versionMismatch" as V
+import "./state" as S
+import "./monitorRounding" as MR
 import QtQuick
-import QtQuick.Controls
-import QtQuick.Layouts
 import Quickshell
-import "./services/"
+import Quickshell.Io
+import Quickshell.Hyprland
+import Quickshell.Services.SystemTray
+import "config"
 
-ShellRoot {
-    // Enable/disable modules here. False = not loaded at all, so rest assured
-    // no unnecessary stuff will take up memory if you decide to only use, say, the overview.
-    property bool enableOverview: true
+Scope {
+  property bool showBars: false
 
-    // Force initialization of some singletons
-    Component.onCompleted: {
-        MaterialThemeLoader.reapplyTheme()
-        ConfigLoader.loadConfig()
+  Component.onCompleted: {
+    SystemTray; // register a status notifier host as early as possible
+    console.log("Shell initialized");
+    S.BrightnessState.load();
+  }
+
+  Variants {
+    model: {
+      S.UpdateState.init();
+
+      let mons = Quickshell.screens.filter(m => {
+        if (Config.settings.panels.monitorChoiceMode == 0)
+          return !Config.settings.panels.excludedMonitors.includes(m.name);
+        else
+          return (Config.settings.panels.includedMonitors.includes(m.name) || Config.settings.panels.includedMonitors.includes("" + Quickshell.screens.indexOf(m)));
+      });
+
+      if (mons.length == 0) {
+        S.ErrorState.monitorError = true;
+        return [Quickshell.screens[0]]; // prevent a softlock
+      }
+      S.ErrorState.monitorError = false;
+      return mons;
     }
 
-    Loader { active: enableOverview; sourceComponent: Overview {} }
+    ScreenState {
+      required property ShellScreen modelData
 
+      screen: modelData
+      showBar: showBars
+    }
+  }
+
+  Variants {
+    model: {
+      if (!C.Config.settings.monitorRounding.enabled || !C.Config.settings.monitorRounding.allMonitors)
+        return [];
+
+      return Quickshell.screens;
+    }
+
+    MR.RoundedMonitorElement {
+      required property ShellScreen modelData
+      screen: modelData
+      show: C.Config.settings.monitorRounding.enabled
+    }
+  }
+
+  SH.ShortcutsPanel {
+    screen: Quickshell.screens.find(s => s.name === Hyprland.focusedMonitor?.name) ?? null
+  }
+
+  SE.SettingsPanel {
+    screen: Quickshell.screens.find(s => s.name === Hyprland.focusedMonitor?.name) ?? null
+  }
+
+  I.IntroMenu {
+    visible: !C.Config.misc.introductionDone
+    screen: Quickshell.screens[0]
+  }
+
+  V.VersionMismatch {
+    screen: Quickshell.screens[0]
+  }
+
+  IpcHandler {
+    target: "update"
+
+    function updated(epoch: int): void {
+      S.UpdateState.setUpdated(epoch);
+    }
+  }
+
+  IpcHandler {
+    target: "bar"
+
+    function setVisible(visible: int): void {
+      showBars = !!visible
+    }
+
+    function toggleVisible(): void {
+      showBars = !showBars
+    }
+  }
 }

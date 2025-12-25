@@ -167,14 +167,16 @@ apply_image_wallpaper() {
   fi
 
   swww img -o "$focused_monitor" "$image_path" $SWWW_PARAMS
+  "$SCRIPTSDIR/WallustSwww.sh"
 
   # Run additional scripts
-  "$SCRIPTSDIR/WallustSwww.sh"
   sleep 2
+  ~/.config/hyprland-de/scripts/wallpaper.sh "$image_path"
   "$SCRIPTSDIR/Refresh.sh"
   sleep 1
 
-  set_sddm_wallpaper
+  # Josh: This is annoying
+  #set_sddm_wallpaper
 }
 
 apply_video_wallpaper() {

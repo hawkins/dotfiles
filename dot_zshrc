@@ -14,7 +14,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="spaceship"
 # My favorites: agnosterzak, gozilla, zeit, bira, mira, wedisagree
-ZSH_THEME="agnosterzak"
+ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"

@@ -1,0 +1,41 @@
+[config]
+
+[templates.gtk3]
+input_path = '~/.config/matugen/templates/gtk-template.css'
+output_path = '~/.config/gtk-3.0/matugen.css'
+
+[templates.gtk4]
+input_path = '~/.config/matugen/templates/gtk-template.css'
+output_path = '~/.config/gtk-4.0/matugen.css'
+
+[templates.hyprland]
+input_path = '~/.config/matugen/templates/hl-template.conf'
+output_path = '~/.config/hypr/conf.d/init/matugen.conf'
+
+[templates.hyprlock]
+input_path = '~/.config/matugen/templates/hl-template.conf'
+output_path = '~/.config/hypr/hyprlockColors.conf'
+
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty-template.conf'
+output_path = '~/.config/kitty/matugen.conf'
+
+[templates.qtKDE]
+input_path = '~/.config/matugen/templates/qtKDE-template.colors'
+output_path = '~/.config/qt6ct/colors/matugen-kde.colors'
+
+[templates.walker]
+input_path = '~/.config/matugen/templates/walker-template.css'
+output_path = '~/.config/walker/themes/hypr.css'
+
+[templates.walkernew]
+input_path = '~/.config/matugen/templates/walker-new-template.css'
+output_path = '~/.config/walker/themes/hypr/style.css'
+
+[templates.quickshell]
+input_path = '~/.config/matugen/templates/quickshell-template.json'
+output_path = '~/.config/quickshell/matugen.json'
+
+[templates.fluent]
+input_path = '~/.config/matugen/templates/fluent-template.kvconfig'
+output_path = '~/.config/Kvantum/Fluent-round/Fluent-roundDark.kvconfig'
