@@ -15,7 +15,7 @@ configuration {
     me-select-entry:            "MouseSecondary";
     me-accept-entry:            "MousePrimary";
     window-format:              "{w} · {c} · {t}";
-    
+
 }
 /* ---- Load wallust colors ---- */
 @theme "~/.config/rofi/wallust/colors-rofi.rasi"
@@ -35,12 +35,12 @@ configuration {
 /* ---- Window ---- */
 window {
     width:						15%;
-	height:						80%;
+	height:						30%;
     x-offset:                   8px;
     y-offset:                   0px;
     spacing:                    0px;
     padding:                    0px;
-    margin:                     0px; 
+    margin:                     0px;
     border:                     2px;
     border-color:               @border-color;
     cursor:                     "default";
@@ -146,7 +146,7 @@ button selected {
     text-color:                @foreground;
     border:                    1px;
     border-color:              @background;
-	
+
 }
 
 /* ---- Listview ---- */
