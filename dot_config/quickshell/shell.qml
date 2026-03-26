@@ -4,7 +4,6 @@ import "./config" as C
 import "./intro" as I
 import "./shortcuts" as SH
 import "./settings" as SE
-import "./versionMismatch" as V
 import "./state" as S
 import "./monitorRounding" as MR
 import QtQuick
@@ -25,8 +24,6 @@ Scope {
 
   Variants {
     model: {
-      S.UpdateState.init();
-
       let mons = Quickshell.screens.filter(m => {
         if (Config.settings.panels.monitorChoiceMode == 0)
           return !Config.settings.panels.excludedMonitors.includes(m.name);
@@ -76,18 +73,6 @@ Scope {
   I.IntroMenu {
     visible: !C.Config.misc.introductionDone
     screen: Quickshell.screens[0]
-  }
-
-  V.VersionMismatch {
-    screen: Quickshell.screens[0]
-  }
-
-  IpcHandler {
-    target: "update"
-
-    function updated(epoch: int): void {
-      S.UpdateState.setUpdated(epoch);
-    }
   }
 
   IpcHandler {

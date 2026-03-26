@@ -102,15 +102,6 @@ PanelWindow {
                     onPressed: root.currentComponent = other
                 }
 
-                CategoryButton {
-                    id: updates
-
-                    icon: "arrow_upward"
-                    text: "Updates"
-                    active: root.currentComponent == updates
-                    onPressed: root.currentComponent = updates
-                }
-
             }
 
             Rectangle {
@@ -160,22 +151,6 @@ PanelWindow {
                 CAT.OtherCategory {
                     opacity: root.currentComponent == other ? 1 : 0
                     z: root.currentComponent == other ? 2 : 1
-                    anchors.fill: parent
-
-                    Behavior on opacity {
-                        NumberAnimation {
-                            duration: C.Globals.anim_MEDIUM
-                            easing.type: Easing.BezierSpline
-                            easing.bezierCurve: C.Globals.anim_CURVE_SMOOTH_SLIDE
-                        }
-
-                    }
-
-                }
-
-                CAT.UpdatesCategory {
-                    opacity: root.currentComponent == updates ? 1 : 0
-                    z: root.currentComponent == updates ? 2 : 1
                     anchors.fill: parent
 
                     Behavior on opacity {

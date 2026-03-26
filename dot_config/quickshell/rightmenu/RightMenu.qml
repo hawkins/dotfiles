@@ -4,7 +4,6 @@ import "../notifs" as N
 import "../state" as S
 import "../shortcuts" as SH
 import "./settings" as ST
-import "./updates" as UP
 import "./power" as PO
 import QtQuick
 import QtQuick.Controls
@@ -14,7 +13,6 @@ import Quickshell.Widgets
 
 WrapperItem {
   property bool powerOpen: false
-  property bool updatesOpen: false
 
   property bool idleInhibitEnabled: false
 
@@ -26,11 +24,11 @@ WrapperItem {
     ColumnLayout {
       id: rightMenuLayout
 
-      opacity: updatesOpen || powerOpen ? 0 : 1
+      opacity: powerOpen ? 0 : 1
       visible: opacity != 0
       spacing: 15
       anchors.fill: parent
-      z: updatesOpen || powerOpen ? 1 : 2
+      z: powerOpen ? 1 : 2
 
       Clock {
         Layout.fillWidth: true
@@ -162,11 +160,6 @@ WrapperItem {
         }
       }
 
-      UpdateBar {
-        visible: S.UpdateState.updatesAvailable && !S.UpdateState.updateRunning
-        Layout.fillWidth: true
-      }
-
       Stats {
         Layout.fillWidth: true
       }
@@ -180,7 +173,7 @@ WrapperItem {
       }
 
       transform: Translate {
-        x: updatesOpen || powerOpen ? -40 : 0
+        x: powerOpen ? -40 : 0
 
         Behavior on x {
           NumberAnimation {
@@ -219,35 +212,8 @@ WrapperItem {
       }
     }
 
-    UP.Updates {
-      visible: opacity != 0
-      anchors.fill: parent
-      opacity: updatesOpen ? 1 : 0
-      z: updatesOpen ? 2 : 1
-
-      Behavior on opacity {
-        NumberAnimation {
-          duration: 250
-          easing.type: Easing.BezierSpline
-          easing.bezierCurve: C.Globals.anim_CURVE_SMOOTH_SLIDE
-        }
-      }
-
-      transform: Translate {
-        x: updatesOpen ? 0 : 40
-
-        Behavior on x {
-          NumberAnimation {
-            duration: 300
-            easing.type: Easing.BezierSpline
-            easing.bezierCurve: C.Globals.anim_CURVE_SMOOTH_SLIDE
-          }
-        }
-      }
-    }
-
     RowLayout {
-      opacity: updatesOpen || powerOpen ? 0 : 1
+      opacity: powerOpen ? 0 : 1
 
       Behavior on opacity {
         NumberAnimation {
@@ -258,7 +224,7 @@ WrapperItem {
       }
 
       visible: opacity != 0
-      z: updatesOpen || powerOpen ? 1 : 2
+      z: powerOpen ? 1 : 2
 
       anchors {
         right: parent.right
@@ -306,7 +272,7 @@ WrapperItem {
     }
 
     RowLayout {
-      opacity: updatesOpen || powerOpen ? 0 : 1
+      opacity: powerOpen ? 0 : 1
 
       Behavior on opacity {
         NumberAnimation {
@@ -317,7 +283,7 @@ WrapperItem {
       }
 
       visible: opacity != 0
-      z: updatesOpen || powerOpen ? 1 : 2
+      z: powerOpen ? 1 : 2
 
       anchors {
         right: parent.right
@@ -360,69 +326,8 @@ WrapperItem {
         }
       }
 
-      WrapperMouseArea {
-        id: wallpaperMa
-
-        implicitHeight: 20
-        implicitWidth: 20
-        hoverEnabled: true
-        onPressed: () => {
-          Quickshell.execDetached(["bash", "-c", "~/.config/hyprland-de/scripts/pickWallpaper.sh"]);
-          Quickshell.execDetached(["hyprctl", "dispatch", "global", "hyprland-shell:rightMenuToggle"]); // FIXME: this sucks!!!!
-        }
-
-        Rectangle {
-          anchors.fill: parent
-          radius: 4
-          color: C.Config.applySecondaryOpacity(wallpaperMa.containsMouse ? Qt.lighter(C.Config.theme.surface_container, 3) : C.Config.theme.surface_container)
-
-          CW.FontIcon {
-            anchors.centerIn: parent
-            text: "wallpaper"
-          }
-
-          Behavior on color {
-            ColorAnimation {
-              duration: 400
-              easing.type: Easing.BezierSpline
-              easing.bezierCurve: C.Globals.anim_CURVE_SMOOTH_SLIDE
-            }
-          }
-        }
-      }
-
       Item {
         Layout.fillWidth: true
-      }
-
-      WrapperMouseArea {
-        id: updatesMa
-
-        implicitHeight: 20
-        implicitWidth: 20
-        hoverEnabled: true
-        onPressed: () => {
-          updatesOpen = true;
-        }
-
-        Rectangle {
-          anchors.fill: parent
-          radius: 4
-          color: C.Config.applySecondaryOpacity(updatesMa.containsMouse ? Qt.lighter(C.Config.theme.surface_container, 3) : C.Config.theme.surface_container)
-
-          CW.FontIcon {
-            anchors.centerIn: parent
-            text: "arrow_upward"
-          }
-
-          Behavior on color {
-            ColorAnimation {
-              duration: 400
-              easing.type: Easing.BezierSpline
-              easing.bezierCurve: C.Globals.anim_CURVE_SMOOTH_SLIDE
-            }
-          }
-        }
       }
 
       WrapperMouseArea {
@@ -458,7 +363,7 @@ WrapperItem {
     }
 
     RowLayout {
-      opacity: powerOpen || updatesOpen ? 1 : 0
+      opacity: powerOpen ? 1 : 0
 
       Behavior on opacity {
         NumberAnimation {
@@ -469,7 +374,7 @@ WrapperItem {
       }
 
       visible: opacity != 0
-      z: powerOpen || updatesOpen ? 2 : 1
+      z: powerOpen ? 2 : 1
 
       anchors {
         right: parent.right
@@ -487,7 +392,6 @@ WrapperItem {
         implicitWidth: 20
         hoverEnabled: true
         onPressed: () => {
-          updatesOpen = false;
           powerOpen = false;
         }
 

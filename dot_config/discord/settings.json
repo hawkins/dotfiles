@@ -6,10 +6,13 @@
   "chromiumSwitches": {},
   "SKIP_HOST_UPDATE": true,
   "WINDOW_BOUNDS": {
-    "x": 16,
-    "y": 52,
-    "width": 5088,
-    "height": 2092
+    "x": 1286,
+    "y": 1102,
+    "width": 1258,
+    "height": 1042
   },
-  "enableHardwareAcceleration": true
+  "enableHardwareAcceleration": false,
+  "asyncVideoInputDeviceInit": false,
+  "enableLibOpenH264Electron": false,
+  "openH264Enabled": true
 }

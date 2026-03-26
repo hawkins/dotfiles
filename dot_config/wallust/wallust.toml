@@ -1,6 +1,6 @@
 backend = "resized"
 threshold = 10
-palette = "dark"
+palette = "dark16"
 
 [templates]
 kitty.template = 'kitty-template.conf'
