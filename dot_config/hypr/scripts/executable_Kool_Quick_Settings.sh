@@ -3,7 +3,7 @@
 # Rofi menu for KooL Hyprland Quick Settings (SUPER SHIFT E)
 
 # Modify this config file for default terminal and EDITOR
-config_file="$HOME/.config/hypr/UserConfigs/01-UserDefaults.conf"
+config_file="$HOME/.config/hypr/custom.d/init/app-vars.conf"
 
 tmp_config_file=$(mktemp)
 sed 's/^\$//g; s/ = /=/g' "$config_file" > "$tmp_config_file"
@@ -11,8 +11,9 @@ source "$tmp_config_file"
 # ##################################### #
 
 # variables
-configs="$HOME/.config/hypr/configs"
-UserConfigs="$HOME/.config/hypr/UserConfigs"
+customd_regular="$HOME/.config/hypr/custom.d/regular"
+customd_init="$HOME/.config/hypr/custom.d/init"
+customd_inactive="$HOME/.config/hypr/custom.d/inactive"
 rofi_theme="$HOME/.config/rofi/config-edit.rasi"
 msg=' ⁉️ Choose what to do ⁉️'
 iDIR="$HOME/.config/swaync/images"
@@ -53,16 +54,16 @@ main() {
     
     # Map choices to corresponding files
     case "$choice" in
-    	"view/edit User Defaults") file="$UserConfigs/01-UserDefaults.conf" ;;
-        "view/edit ENV variables") file="$UserConfigs/ENVariables.conf" ;;
-        "view/edit Window Rules") file="$UserConfigs/WindowRules.conf" ;;
-        "view/edit User Keybinds") file="$UserConfigs/UserKeybinds.conf" ;;
-        "view/edit User Settings") file="$UserConfigs/UserSettings.conf" ;;
-        "view/edit Startup Apps") file="$UserConfigs/Startup_Apps.conf" ;;
-        "view/edit Decorations") file="$UserConfigs/UserDecorations.conf" ;;
-        "view/edit Animations") file="$UserConfigs/UserAnimations.conf" ;;
-        "view/edit Laptop Keybinds") file="$UserConfigs/Laptops.conf" ;;
-        "view/edit Default Keybinds") file="$configs/Keybinds.conf" ;;
+    	"view/edit User Defaults") file="$customd_init/app-vars.conf" ;;
+        "view/edit ENV variables") file="$customd_inactive/ENVariables.conf" ;;
+        "view/edit Window Rules") file="$customd_regular/rules.conf" ;;
+        "view/edit User Keybinds") file="$customd_regular/keybinds-user.conf" ;;
+        "view/edit User Settings") file="$customd_inactive/UserSettings.conf" ;;
+        "view/edit Startup Apps") file="$customd_regular/startup.conf" ;;
+        "view/edit Decorations") file="$customd_inactive/UserDecorations.conf" ;;
+        "view/edit Animations") file="$customd_inactive/UserAnimations.conf" ;;
+        "view/edit Laptop Keybinds") file="$customd_inactive/Laptops.conf" ;;
+        "view/edit Default Keybinds") file="$customd_regular/keybinds-base.conf" ;;
         "Choose Kitty Terminal Theme") $scriptsDir/Kitty_themes.sh ;;
         "Configure Monitors (nwg-displays)") 
             if ! command -v nwg-displays &>/dev/null; then

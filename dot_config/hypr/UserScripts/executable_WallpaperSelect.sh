@@ -132,7 +132,7 @@ set_sddm_wallpaper() {
 
 modify_startup_config() {
   local selected_file="$1"
-  local startup_config="$HOME/.config/hypr/UserConfigs/Startup_Apps.conf"
+  local startup_config="$HOME/.config/hypr/custom.d/regular/startup.conf"
 
   # Check if it's a live wallpaper (video)
   if [[ "$selected_file" =~ \.(mp4|mkv|mov|webm)$ ]]; then

@@ -21,7 +21,7 @@
 # This is for changing kb_layouts. Set kb_layouts in 
 
 MAP_FILE="$HOME/.cache/kb_layout_per_window"
-CFG_FILE="$HOME/.config/hypr/UserConfigs/UserSettings.conf"
+CFG_FILE="$HOME/.config/hypr/custom.d/inactive/UserSettings.conf"
 ICON="$HOME/.config/swaync/images/ja.png"
 SCRIPT_NAME="$(basename "$0")"
 
