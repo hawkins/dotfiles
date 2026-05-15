@@ -1,0 +1,1 @@
+-- hyprviz configuration (auto-generated)
