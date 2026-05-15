@@ -12,6 +12,10 @@ output_path = '~/.config/gtk-4.0/matugen.css'
 input_path = '~/.config/matugen/templates/hl-template.conf'
 output_path = '~/.config/hypr/conf.d/init/matugen.conf'
 
+[templates.hyprland_lua]
+input_path = '~/.config/matugen/templates/hl-template.lua'
+output_path = '~/.config/hypr/conf.d/init/matugen.lua'
+
 [templates.hyprlock]
 input_path = '~/.config/matugen/templates/hl-template.conf'
 output_path = '~/.config/hypr/hyprlockColors.conf'
