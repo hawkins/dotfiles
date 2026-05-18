@@ -3,6 +3,7 @@
 # when they are showing video streaming content, restoring transparency otherwise.
 
 VIDEO_TITLES=(
+    "Apple TV"
     "Twitch"
     "YouTube"
     "Netflix"
@@ -51,13 +52,17 @@ set_window_opacity() {
 
     if is_video_title "$title"; then
         if [[ "${window_opacity_state[$address]}" != "opaque" ]]; then
+            echo "[$(date '+%H:%M:%S')] title change: '$title' → opaque"
             hyprctl -q dispatch setprop "address:$address" opaque true 2>/dev/null
             window_opacity_state[$address]="opaque"
         fi
     else
         if [[ "${window_opacity_state[$address]}" == "opaque" ]]; then
+            echo "[$(date '+%H:%M:%S')] title change: '$title' → normal"
             hyprctl -q dispatch setprop "address:$address" opaque false 2>/dev/null
             window_opacity_state[$address]="normal"
+        else
+            echo "[$(date '+%H:%M:%S')] title change: '$title'"
         fi
     fi
 }
