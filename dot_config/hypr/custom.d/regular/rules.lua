@@ -6,13 +6,13 @@ hl.window_rule({
 	match = { initialClass = "^([Ff]irefox|org.mozilla.firefox|[Ff]irefox-esr|[Ff]irefox-bin)$" },
 	tag = "+browser",
 })
-hl.window_rule({ match = { initialclass = "^([Gg]oogle-chrome(-beta|-dev|-unstable)?)$" }, tag = "+browser" })
-hl.window_rule({ match = { initialclass = "^(chrome-.+-Default)$" }, tag = "+browser" })
-hl.window_rule({ match = { initialclass = "^([Cc]hromium)$" }, tag = "+browser" })
-hl.window_rule({ match = { initialclass = "^([Mm]icrosoft-edge(-stable|-beta|-dev|-unstable))$" }, tag = "+browser" })
-hl.window_rule({ match = { initialclass = "^(Brave-browser(-beta|-dev|-unstable)?)$" }, tag = "+browser" })
-hl.window_rule({ match = { initialclass = "^([Tt]horium-browser|[Cc]achy-browser)$" }, tag = "+browser" })
-hl.window_rule({ match = { initialclass = "^(zen-alpha|zen)$" }, tag = "+browser" })
+hl.window_rule({ match = { initialClass = "^([Gg]oogle-chrome(-beta|-dev|-unstable)?)$" }, tag = "+browser" })
+hl.window_rule({ match = { initialClass = "^(chrome-.+-Default)$" }, tag = "+browser" })
+hl.window_rule({ match = { initialClass = "^([Cc]hromium)$" }, tag = "+browser" })
+hl.window_rule({ match = { initialClass = "^([Mm]icrosoft-edge(-stable|-beta|-dev|-unstable))$" }, tag = "+browser" })
+hl.window_rule({ match = { initialClass = "^(Brave-browser(-beta|-dev|-unstable)?)$" }, tag = "+browser" })
+hl.window_rule({ match = { initialClass = "^([Tt]horium-browser|[Cc]achy-browser)$" }, tag = "+browser" })
+hl.window_rule({ match = { initialClass = "^(zen-alpha|zen)$" }, tag = "+browser" })
 
 -- Tags: notif
 hl.window_rule({
