@@ -4,5 +4,5 @@ local config_dir = (os.getenv("XDG_CONFIG_HOME") or os.getenv("HOME") .. "/.conf
 
 hl.unbind("all")
 
-dofile(config_dir .. "/custom.d/regular/keybinds-base.lua")
-dofile(config_dir .. "/custom.d/regular/keybinds-user.lua")
+dofile(config_dir .. "/regular/keybinds-base.lua")
+dofile(config_dir .. "/regular/keybinds-user.lua")

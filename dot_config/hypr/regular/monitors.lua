@@ -1,3 +1,6 @@
+-- Fallback: match any output with preferred mode.
+hl.monitor({ output = "", mode = "preferred", position = "auto", scale = 1 })
+
 -- Custom monitor configuration.
 -- Run `hyprctl monitors all` to find output names and modes.
 -- Uncomment and edit as needed:

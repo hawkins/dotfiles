@@ -8,7 +8,7 @@ local UserConfigs = HOME .. "/.config/hypr/UserConfigs"
 local config_dir  = (os.getenv("XDG_CONFIG_HOME") or HOME .. "/.config") .. "/hypr"
 
 -- Load additional app variables (term, files, Search_Engine, etc.)
-dofile(config_dir .. "/custom.d/init/app-vars.lua")
+dofile(config_dir .. "/init/app-vars.lua")
 
 -- App launcher / common apps
 hl.bind("SUPER + D",      hl.dsp.exec_cmd("pkill rofi || true; rofi -show drun -modi drun,filebrowser,run,window"))

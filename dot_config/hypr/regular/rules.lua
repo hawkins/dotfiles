@@ -1,5 +1,32 @@
--- Window and layer rules.
--- https://github.com/JaKooLit
+-- Base rules
+hl.window_rule({ match = { class = ".*" }, suppress_event = "maximize" })
+
+hl.window_rule({
+    match = { class = "^$", title = "^$", xwayland = true, float = true, fullscreen = false, pin = false },
+    no_focus = true,
+})
+
+hl.layer_rule({
+    match        = { namespace = "walker" },
+    blur         = true,
+    ignore_alpha = 0.41,
+})
+
+hl.layer_rule({
+    match        = { namespace = "hyprland-shell:bar" },
+    blur         = true,
+    blur_popups  = true,
+    ignore_alpha = 0.41,
+})
+
+hl.layer_rule({
+    match        = { namespace = "hyprland-shell:notifs" },
+    blur         = true,
+    ignore_alpha = 0.41,
+    no_anim      = true,
+})
+
+hl.window_rule({ match = { class = "hyprland-share-picker" }, float = true })
 
 -- Tags: browser
 hl.window_rule({

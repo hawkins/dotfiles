@@ -6,7 +6,7 @@ end)
 
 -- startup.lua registers its own hyprland.start handler for the rest of the apps
 local config_dir = (os.getenv("XDG_CONFIG_HOME") or os.getenv("HOME") .. "/.config") .. "/hypr"
-dofile(config_dir .. "/custom.d/regular/startup.lua")
+dofile(config_dir .. "/regular/startup.lua")
 
 hl.on("hyprland.start", function()
 	hl.exec_cmd("hyprpm reload -n")
