@@ -37,7 +37,6 @@ This config is a hybrid of [hyprland-de (HLDE)](https://github.com/hyprland-de) 
 | File | Purpose |
 |---|---|
 | `autostart.lua` | Starts core HLDE services: walker, hypridle, quickshell |
-| `binds.lua` | Unbinds all HLDE defaults, then sources the two keybind files below |
 | `keybinds-base.lua` | JaKooLit default keybinds (window management, workspaces, screenshots, media) |
 | `keybinds-user.lua` | Personal keybind additions (RuneLite, rofi, waybar toggles, etc.) |
 | `env.lua` | Cursor theme environment variables |

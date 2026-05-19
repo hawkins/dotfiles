@@ -12,12 +12,13 @@ fi
 
 # define the config files
 keybinds_conf="$HOME/.config/hypr/regular/keybinds-base.lua"
+base_keybinds_conf="$HOME/.config/hypr/regular/keybinds-base.lua"
 user_keybinds_conf="$HOME/.config/hypr/regular/keybinds-user.lua"
 rofi_theme="$HOME/.config/rofi/config-keybinds.rasi"
 msg='☣️ NOTE ☣️: Clicking with Mouse or Pressing ENTER will have NO function'
 
 # combine the contents of the keybinds files and filter for keybinds
-keybinds=$(cat "$keybinds_conf" "$user_keybinds_conf" | grep -E '^hl.bind')
+keybinds=$(cat "$keybinds_conf" "$base_keybinds_conf" "$user_keybinds_conf" | grep -E '^hl.bind')
 
 # check for any keybinds to display
 if [[ -z "$keybinds" ]]; then
