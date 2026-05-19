@@ -17,7 +17,6 @@ This config is a hybrid of [hyprland-de (HLDE)](https://github.com/hyprland-de) 
 | `hyprlockColors.conf` | Lock screen color overrides |
 | `hyprpaper.conf` | Wallpaper daemon config |
 | `application-style.conf` | hyprland-qt-support style (border radius, motion) for Qt apps |
-| `hyprviz.conf` | Auto-generated hyprviz config (do not edit) |
 
 ---
 
