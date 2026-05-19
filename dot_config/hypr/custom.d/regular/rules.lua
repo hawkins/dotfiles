@@ -2,17 +2,23 @@
 -- https://github.com/JaKooLit
 
 -- Tags: browser
-hl.window_rule({ match = { class = "^([Ff]irefox|org.mozilla.firefox|[Ff]irefox-esr|[Ff]irefox-bin)$" }, tag = "+browser" })
-hl.window_rule({ match = { class = "^([Gg]oogle-chrome(-beta|-dev|-unstable)?)$" }, tag = "+browser" })
-hl.window_rule({ match = { class = "^(chrome-.+-Default)$" }, tag = "+browser" })
-hl.window_rule({ match = { class = "^([Cc]hromium)$" }, tag = "+browser" })
-hl.window_rule({ match = { class = "^([Mm]icrosoft-edge(-stable|-beta|-dev|-unstable))$" }, tag = "+browser" })
-hl.window_rule({ match = { class = "^(Brave-browser(-beta|-dev|-unstable)?)$" }, tag = "+browser" })
-hl.window_rule({ match = { class = "^([Tt]horium-browser|[Cc]achy-browser)$" }, tag = "+browser" })
-hl.window_rule({ match = { class = "^(zen-alpha|zen)$" }, tag = "+browser" })
+hl.window_rule({
+	match = { initialClass = "^([Ff]irefox|org.mozilla.firefox|[Ff]irefox-esr|[Ff]irefox-bin)$" },
+	tag = "+browser",
+})
+hl.window_rule({ match = { initialclass = "^([Gg]oogle-chrome(-beta|-dev|-unstable)?)$" }, tag = "+browser" })
+hl.window_rule({ match = { initialclass = "^(chrome-.+-Default)$" }, tag = "+browser" })
+hl.window_rule({ match = { initialclass = "^([Cc]hromium)$" }, tag = "+browser" })
+hl.window_rule({ match = { initialclass = "^([Mm]icrosoft-edge(-stable|-beta|-dev|-unstable))$" }, tag = "+browser" })
+hl.window_rule({ match = { initialclass = "^(Brave-browser(-beta|-dev|-unstable)?)$" }, tag = "+browser" })
+hl.window_rule({ match = { initialclass = "^([Tt]horium-browser|[Cc]achy-browser)$" }, tag = "+browser" })
+hl.window_rule({ match = { initialclass = "^(zen-alpha|zen)$" }, tag = "+browser" })
 
 -- Tags: notif
-hl.window_rule({ match = { class = "^(swaync-control-center|swaync-notification-window|swaync-client|class)$" }, tag = "+notif" })
+hl.window_rule({
+	match = { class = "^(swaync-control-center|swaync-notification-window|swaync-client|class)$" },
+	tag = "+notif",
+})
 
 -- Tags: KooL
 hl.window_rule({ match = { title = "^(KooL Quick Cheat Sheet)$" }, tag = "+KooL_Cheat" })
@@ -61,42 +67,38 @@ hl.window_rule({ match = { class = "^(app.drey.Warp)$" }, tag = "+file-manager" 
 hl.window_rule({ match = { class = "^([Ww]aytrogen)$" }, tag = "+wallpaper" })
 
 -- Tags: multimedia_video
-hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Apple TV).*$" }, tag = "+multimedia_video" })
-hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Twitch).*$" }, tag = "+multimedia_video" })
-hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(YouTube).*$" }, tag = "+multimedia_video" })
-hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Netflix).*$" }, tag = "+multimedia_video" })
-hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Hulu).*$" }, tag = "+multimedia_video" })
-hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Prime Video).*$" }, tag = "+multimedia_video" })
-hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Disney\+).*$" }, tag = "+multimedia_video" })
-hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(HBO).*$" }, tag = "+multimedia_video" })
-hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Max).*$" }, tag = "+multimedia_video" })
-hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Peacock).*$" }, tag = "+multimedia_video" })
-hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Paramount).*$" }, tag = "+multimedia_video" })
-hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(ESPN\+).*$" }, tag = "+multimedia_video" })
-hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Crunchyroll).*$" }, tag = "+multimedia_video" })
-hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Funimation).*$" }, tag = "+multimedia_video" })
-hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(MUBI).*$" }, tag = "+multimedia_video" })
-hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Tubi).*$" }, tag = "+multimedia_video" })
-hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Pluto TV).*$" }, tag = "+multimedia_video" })
-hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Plex).*$" }, tag = "+multimedia_video" })
-hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Jellyfin).*$" }, tag = "+multimedia_video" })
-hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Emby).*$" }, tag = "+multimedia_video" })
-hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(SkyShowtime).*$" }, tag = "+multimedia_video" })
-hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(discovery\+).*$" }, tag = "+multimedia_video" })
-hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(BritBox).*$" }, tag = "+multimedia_video" })
-hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Shudder).*$" }, tag = "+multimedia_video" })
-hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(AMC\+).*$" }, tag = "+multimedia_video" })
-hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Starz).*$" }, tag = "+multimedia_video" })
-hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Showtime).*$" }, tag = "+multimedia_video" })
-hl.window_rule({ match = { title = "^(Picture-in-Picture)$" }, tag = "+multimedia_video" })
-hl.window_rule({ match = { title = "^(Picture-in-Picture)$" }, tag = "-browser" })
-hl.window_rule({ match = { title = "^(Picture in picture)$" }, tag = "+multimedia_video" })
-hl.window_rule({ match = { title = "^(Picture in picture)$" }, tag = "-browser" })
-hl.window_rule({ match = { class = "^([Mm]pv|vlc)$" }, tag = "+multimedia_video" })
-
--- Multimedia overrides
-hl.window_rule({ match = { tag = "multimedia_video" }, tag = "-browser" })
-hl.window_rule({ match = { tag = "multimedia_video" }, opaque = true, no_dim = true })
+-- hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Apple TV).*$" }, tag = "+multimedia_video" })
+-- hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Twitch).*$" }, tag = "+multimedia_video" })
+-- hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(YouTube).*$" }, tag = "+multimedia_video" })
+-- hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Netflix).*$" }, tag = "+multimedia_video" })
+-- hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Hulu).*$" }, tag = "+multimedia_video" })
+-- hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Prime Video).*$" }, tag = "+multimedia_video" })
+-- hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Disney\+).*$" }, tag = "+multimedia_video" })
+-- hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(HBO).*$" }, tag = "+multimedia_video" })
+-- hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Max).*$" }, tag = "+multimedia_video" })
+-- hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Peacock).*$" }, tag = "+multimedia_video" })
+-- hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Paramount).*$" }, tag = "+multimedia_video" })
+-- hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(ESPN\+).*$" }, tag = "+multimedia_video" })
+-- hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Crunchyroll).*$" }, tag = "+multimedia_video" })
+-- hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Funimation).*$" }, tag = "+multimedia_video" })
+-- hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(MUBI).*$" }, tag = "+multimedia_video" })
+-- hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Tubi).*$" }, tag = "+multimedia_video" })
+-- hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Pluto TV).*$" }, tag = "+multimedia_video" })
+-- hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Plex).*$" }, tag = "+multimedia_video" })
+-- hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Jellyfin).*$" }, tag = "+multimedia_video" })
+-- hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Emby).*$" }, tag = "+multimedia_video" })
+-- hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(SkyShowtime).*$" }, tag = "+multimedia_video" })
+-- hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(discovery\+).*$" }, tag = "+multimedia_video" })
+-- hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(BritBox).*$" }, tag = "+multimedia_video" })
+-- hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Shudder).*$" }, tag = "+multimedia_video" })
+-- hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(AMC\+).*$" }, tag = "+multimedia_video" })
+-- hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Starz).*$" }, tag = "+multimedia_video" })
+-- hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Showtime).*$" }, tag = "+multimedia_video" })
+-- hl.window_rule({ match = { title = "^(Picture-in-Picture)$" }, tag = "+multimedia_video" })
+-- hl.window_rule({ match = { title = "^(Picture-in-Picture)$" }, tag = "-browser" })
+-- hl.window_rule({ match = { title = "^(Picture in picture)$" }, tag = "+multimedia_video" })
+-- hl.window_rule({ match = { title = "^(Picture in picture)$" }, tag = "-browser" })
+-- hl.window_rule({ match = { class = "^([Mm]pv|vlc)$" }, tag = "+multimedia_video" })
 
 -- Tags: settings
 hl.window_rule({ match = { title = "^(ROG Control)$" }, tag = "+settings" })
@@ -106,32 +108,41 @@ hl.window_rule({ match = { class = "^(gnome-disks|wihotspot(-gui)?)$" }, tag = "
 hl.window_rule({ match = { title = "(Kvantum Manager)" }, tag = "+settings" })
 hl.window_rule({ match = { class = "^(file-roller|org.gnome.FileRoller)$" }, tag = "+settings" })
 hl.window_rule({ match = { class = "^(nm-applet|nm-connection-editor|blueman-manager)$" }, tag = "+settings" })
-hl.window_rule({ match = { class = "^(pavucontrol|org.pulseaudio.pavucontrol|com.saivert.pwvucontrol)$" }, tag = "+settings" })
+hl.window_rule({
+	match = { class = "^(pavucontrol|org.pulseaudio.pavucontrol|com.saivert.pwvucontrol)$" },
+	tag = "+settings",
+})
 hl.window_rule({ match = { class = "^(qt5ct|qt6ct|[Yy]ad)$" }, tag = "+settings" })
 hl.window_rule({ match = { class = "(xdg-desktop-portal-gtk)" }, tag = "+settings" })
 hl.window_rule({ match = { class = "^(org.kde.polkit-kde-authentication-agent-1)$" }, tag = "+settings" })
 hl.window_rule({ match = { class = "^([Rr]ofi)$" }, tag = "+settings" })
 
 -- Tags: viewer
-hl.window_rule({ match = { class = "^(gnome-system-monitor|org.gnome.SystemMonitor|io.missioncenter.MissionCenter)$" }, tag = "+viewer" })
+hl.window_rule({
+	match = { class = "^(gnome-system-monitor|org.gnome.SystemMonitor|io.missioncenter.MissionCenter)$" },
+	tag = "+viewer",
+})
 hl.window_rule({ match = { class = "^(evince)$" }, tag = "+viewer" })
 hl.window_rule({ match = { class = "^(eog|org.gnome.Loupe)$" }, tag = "+viewer" })
 
 -- Position rules
-hl.window_rule({ match = { tag = "KooL_Cheat" },  center = true })
+hl.window_rule({ match = { tag = "KooL_Cheat" }, center = true })
 hl.window_rule({ match = { class = "([Tt]hunar)", title = "negative:(.*[Tt]hunar.*)" }, center = true })
 hl.window_rule({ match = { title = "^(ROG Control)$" }, center = true })
 hl.window_rule({ match = { tag = "KooL-Settings" }, center = true })
 hl.window_rule({ match = { title = "^(Keybindings)$" }, center = true })
-hl.window_rule({ match = { class = "^(pavucontrol|org.pulseaudio.pavucontrol|com.saivert.pwvucontrol)$" }, center = true })
+hl.window_rule({
+	match = { class = "^(pavucontrol|org.pulseaudio.pavucontrol|com.saivert.pwvucontrol)$" },
+	center = true,
+})
 hl.window_rule({ match = { class = "^([Ww]hatsapp-for-linux|ZapZap|com.rtosta.zapzap)$" }, center = true })
 hl.window_rule({ match = { class = "^([Ff]erdium)$" }, center = true })
 
 hl.window_rule({ match = { title = "^(Picture-in-Picture)$" }, move = { "monitor_w * 0.72", "monitor_h * 0.07" } })
 
 -- Workspace assignments
-hl.window_rule({ match = { tag = "games" },     workspace = "2" })
-hl.window_rule({ match = { tag = "im" },        workspace = "3" })
+hl.window_rule({ match = { tag = "games" }, workspace = "2" })
+hl.window_rule({ match = { tag = "im" }, workspace = "3" })
 hl.window_rule({ match = { tag = "im_silent" }, workspace = "3 silent" })
 hl.window_rule({ match = { tag = "gamestore" }, workspace = "4" })
 hl.window_rule({ match = { class = "^([Ss]team)$" }, workspace = "4 silent" })
@@ -156,34 +167,82 @@ hl.window_rule({ match = { title = "^(Picture-in-Picture)$" }, float = true })
 
 -- Float: popups and dialogs
 hl.window_rule({ match = { title = "^(Authentication Required)$" }, float = true, center = true })
-hl.window_rule({ match = { class = "(codium|codium-url-handler|VSCodium)", title = "negative:(.*codium.*|.*VSCodium.*)" }, float = true })
+hl.window_rule({
+	match = { class = "(codium|codium-url-handler|VSCodium)", title = "negative:(.*codium.*|.*VSCodium.*)" },
+	float = true,
+})
 hl.window_rule({ match = { class = "^([Ss]team)$", title = "negative:^([Ss]team)$" }, float = true })
 hl.window_rule({ match = { class = "([Tt]hunar)", title = "negative:(.*[Tt]hunar.*)" }, float = true })
 
-hl.window_rule({ match = { title = "^(Add Folder to Workspace)$" }, float = true, size = { "monitor_w * 0.70", "monitor_h * 0.60" }, center = true })
-hl.window_rule({ match = { title = "^(Save As)$" }, float = true, size = { "monitor_w * 0.70", "monitor_h * 0.60" }, center = true })
-hl.window_rule({ match = { initial_title = "(Open Files)" }, float = true, size = { "monitor_w * 0.70", "monitor_h * 0.60" } })
+hl.window_rule({
+	match = { title = "^(Add Folder to Workspace)$" },
+	float = true,
+	size = { "monitor_w * 0.70", "monitor_h * 0.60" },
+	center = true,
+})
+hl.window_rule({
+	match = { title = "^(Save As)$" },
+	float = true,
+	size = { "monitor_w * 0.70", "monitor_h * 0.60" },
+	center = true,
+})
+hl.window_rule({
+	match = { initial_title = "(Open Files)" },
+	float = true,
+	size = { "monitor_w * 0.70", "monitor_h * 0.60" },
+})
 
-hl.window_rule({ match = { title = "^(SDDM Background)$" }, float = true, center = true, size = { "monitor_w * 0.16", "monitor_h * 0.12" } })
+hl.window_rule({
+	match = { title = "^(SDDM Background)$" },
+	float = true,
+	center = true,
+	size = { "monitor_w * 0.16", "monitor_h * 0.12" },
+})
 
 -- Opacity rules
-hl.window_rule({ match = { tag = "browser" },      opacity = "0.9 0.7" })
-hl.window_rule({ match = { tag = "projects" },     opacity = "0.9 0.8" })
-hl.window_rule({ match = { tag = "im" },           opacity = "0.94 0.86" })
+hl.window_rule({ match = { tag = "browser" }, opacity = "0.9 0.7", opaque = false })
+hl.window_rule({
+	match = {
+		tag = "browser",
+		xwayland = false,
+		fullscreen = false,
+		title = "^.*(Apple TV|Twitch|YouTube|Netflix|Hulu|Prime Video|Disney+|HBO|Max|Peacock|Paramount|ESPN+|Crunchyroll|Funimation|MUBI|Tubi|Pluto TV|Plex|Jellyfin|Emby|SkyShowtime|discovery+|BritBox|Shudder|AMC+|Starz|Showtime).*$",
+	},
+	opacity = "1.0 override 1.0 override",
+	opaque = true,
+	no_dim = true,
+})
+hl.window_rule({
+	match = { title = "^(Picture-in-Picture|Picture in picture)$" },
+	opacity = "1.0 override 1.0 override",
+	opaque = true,
+	no_dim = true,
+})
+hl.window_rule({
+	match = { class = "^([Mm]pv|vlc)$" },
+	opacity = "1.0 override 1.0 override",
+	opaque = true,
+	no_dim = true,
+})
+hl.window_rule({ match = { tag = "projects" }, opacity = "0.9 0.8" })
+hl.window_rule({ match = { tag = "im" }, opacity = "0.94 0.86" })
 hl.window_rule({ match = { tag = "file-manager" }, opacity = "0.9 0.8" })
-hl.window_rule({ match = { tag = "terminal" },     opacity = "0.8 0.7" })
-hl.window_rule({ match = { tag = "settings" },     opacity = "0.8 0.7" })
-hl.window_rule({ match = { tag = "viewer" },       opacity = "0.82 0.75" })
-hl.window_rule({ match = { tag = "wallpaper" },    opacity = "0.9 0.7" })
+hl.window_rule({ match = { tag = "terminal" }, opacity = "0.8 0.7" })
+hl.window_rule({ match = { tag = "settings" }, opacity = "0.8 0.7" })
+hl.window_rule({ match = { tag = "viewer" }, opacity = "0.82 0.75" })
+hl.window_rule({ match = { tag = "wallpaper" }, opacity = "0.9 0.7" })
 hl.window_rule({ match = { class = "^(gedit|org.gnome.TextEditor|mousepad)$" }, opacity = "0.8 0.7" })
 hl.window_rule({ match = { class = "^(deluge)$" }, opacity = "0.9 0.8" })
 hl.window_rule({ match = { class = "^(seahorse)$" }, opacity = "0.9 0.8" })
 
 -- Size rules
-hl.window_rule({ match = { tag = "KooL_Cheat" },  size = { "monitor_w * 0.65", "monitor_h * 0.90" } })
-hl.window_rule({ match = { tag = "wallpaper" },    size = { "monitor_w * 0.70", "monitor_h * 0.70" } })
-hl.window_rule({ match = { tag = "settings" },     size = { "monitor_w * 0.70", "monitor_h * 0.70" } })
-hl.window_rule({ match = { class = "^([Ww]hatsapp-for-linux|ZapZap|com.rtosta.zapzap)$" }, size = { "monitor_w * 0.60", "monitor_h * 0.70" } })
+hl.window_rule({ match = { tag = "KooL_Cheat" }, size = { "monitor_w * 0.65", "monitor_h * 0.90" } })
+hl.window_rule({ match = { tag = "wallpaper" }, size = { "monitor_w * 0.70", "monitor_h * 0.70" } })
+hl.window_rule({ match = { tag = "settings" }, size = { "monitor_w * 0.70", "monitor_h * 0.70" } })
+hl.window_rule({
+	match = { class = "^([Ww]hatsapp-for-linux|ZapZap|com.rtosta.zapzap)$" },
+	size = { "monitor_w * 0.60", "monitor_h * 0.70" },
+})
 hl.window_rule({ match = { class = "^([Ff]erdium)$" }, size = { "monitor_w * 0.60", "monitor_h * 0.70" } })
 
 -- Pinning
@@ -199,14 +258,14 @@ hl.window_rule({ match = { tag = "terraria" }, fullscreen = false, size = { 4096
 
 -- RuneLite tooltips: no decorations, no focus steal
 hl.window_rule({
-    match = { class = "^(net-runelite-client-RuneLite)$", title = "^(win[0-9]+)$", float = true },
-    no_focus  = true,
-    border_size = 0,
-    no_shadow = true,
-    no_anim   = true,
+	match = { class = "^(net-runelite-client-RuneLite)$", title = "^(win[0-9]+)$", float = true },
+	no_focus = true,
+	border_size = 0,
+	no_shadow = true,
+	no_anim = true,
 })
 
 -- Layer rules
-hl.layer_rule({ match = { namespace = "rofi" },               blur = true, ignore_alpha = 0 })
-hl.layer_rule({ match = { namespace = "notifications" },       blur = true, ignore_alpha = 0 })
+hl.layer_rule({ match = { namespace = "rofi" }, blur = true, ignore_alpha = 0 })
+hl.layer_rule({ match = { namespace = "notifications" }, blur = true, ignore_alpha = 0 })
 hl.layer_rule({ match = { namespace = "quickshell:overview" }, blur = true, ignore_alpha = 0.5 })
