@@ -38,8 +38,7 @@ fi
 
 # Check the flag before executing further commands
 if [ "$ln_success" = true ]; then
-    # execute wallust
 	echo 'about to execute wallust'
-    # execute wallust
-    wallust run "$wallpaper_path" &
+    wallust run "$wallpaper_path"
+    hyprctl reload
 fi
