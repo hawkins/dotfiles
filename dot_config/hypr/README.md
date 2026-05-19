@@ -26,8 +26,7 @@ This config is a hybrid of [hyprland-de (HLDE)](https://github.com/hyprland-de) 
 | File | Purpose |
 |---|---|
 | `matugen.lua` | Matugen color palette variables |
-| `apps.lua` | App variables (`terminal`, `fileManager`, etc.) |
-| `app-vars.lua` | Additional app variables (`term`, `files`, `edit`, `Search_Engine`) sourced by keybinds |
+| `app-vars.lua` | App variables (`term`, `files`, `edit`, `Search_Engine`) sourced by keybinds                                                                   |
 | `autostart.lua` | Pre-startup: starts swaync before quickshell (claims notification slot), then sources `regular/startup.lua`, loads hyprpm plugins, starts Discord |
 | `settings.lua` | HLDE feature flags (e.g. disable hyprpaper, enable 12h clock in hyprlock) |
 
@@ -38,7 +37,6 @@ This config is a hybrid of [hyprland-de (HLDE)](https://github.com/hyprland-de) 
 | File | Purpose |
 |---|---|
 | `autostart.lua` | Starts core HLDE services: walker, hypridle, quickshell |
-| `binds-defaults.lua` | HLDE default keybinds (immediately unbound by `binds.lua`) |
 | `binds.lua` | Unbinds all HLDE defaults, then sources the two keybind files below |
 | `keybinds-base.lua` | JaKooLit default keybinds (window management, workspaces, screenshots, media) |
 | `keybinds-user.lua` | Personal keybind additions (RuneLite, rofi, waybar toggles, etc.) |

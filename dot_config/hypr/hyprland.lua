@@ -3,11 +3,9 @@
 local config_dir = (os.getenv("XDG_CONFIG_HOME") or os.getenv("HOME") .. "/.config") .. "/hypr"
 
 dofile(config_dir .. "/init/matugen.lua")
-dofile(config_dir .. "/init/apps.lua")
 dofile(config_dir .. "/init/autostart.lua")
 dofile(config_dir .. "/init/settings.lua")
 dofile(config_dir .. "/regular/autostart.lua")
-dofile(config_dir .. "/regular/binds-defaults.lua")
 dofile(config_dir .. "/regular/env.lua")
 dofile(config_dir .. "/regular/monitors.lua")
 dofile(config_dir .. "/regular/rules.lua")
