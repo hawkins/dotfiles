@@ -60,9 +60,6 @@ hl.window_rule({ match = { class = "^(app.drey.Warp)$" }, tag = "+file-manager" 
 -- Tags: wallpaper
 hl.window_rule({ match = { class = "^([Ww]aytrogen)$" }, tag = "+wallpaper" })
 
--- Tags: multimedia
-hl.window_rule({ match = { class = "^([Aa]udacious)$" }, tag = "+multimedia" })
-
 -- Tags: multimedia_video
 hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Apple TV).*$" }, tag = "+multimedia_video" })
 hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Twitch).*$" }, tag = "+multimedia_video" })
@@ -91,12 +88,14 @@ hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Sh
 hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(AMC\+).*$" }, tag = "+multimedia_video" })
 hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Starz).*$" }, tag = "+multimedia_video" })
 hl.window_rule({ match = { xwayland = false, fullscreen = false, title = "^.*(Showtime).*$" }, tag = "+multimedia_video" })
+hl.window_rule({ match = { title = "^(Picture-in-Picture)$" }, tag = "+multimedia_video" })
+hl.window_rule({ match = { title = "^(Picture-in-Picture)$" }, tag = "-browser" })
+hl.window_rule({ match = { title = "^(Picture in picture)$" }, tag = "+multimedia_video" })
+hl.window_rule({ match = { title = "^(Picture in picture)$" }, tag = "-browser" })
 hl.window_rule({ match = { class = "^([Mm]pv|vlc)$" }, tag = "+multimedia_video" })
 
 -- Multimedia overrides
 hl.window_rule({ match = { tag = "multimedia_video" }, tag = "-browser" })
-hl.window_rule({ match = { title = "^(Picture-in-Picture)$" }, tag = "-browser" })
-hl.window_rule({ match = { title = "^(Picture in picture)$" }, tag = "-browser" })
 hl.window_rule({ match = { tag = "multimedia_video" }, opaque = true, no_dim = true })
 
 -- Tags: settings
@@ -127,6 +126,7 @@ hl.window_rule({ match = { title = "^(Keybindings)$" }, center = true })
 hl.window_rule({ match = { class = "^(pavucontrol|org.pulseaudio.pavucontrol|com.saivert.pwvucontrol)$" }, center = true })
 hl.window_rule({ match = { class = "^([Ww]hatsapp-for-linux|ZapZap|com.rtosta.zapzap)$" }, center = true })
 hl.window_rule({ match = { class = "^([Ff]erdium)$" }, center = true })
+
 hl.window_rule({ match = { title = "^(Picture-in-Picture)$" }, move = { "monitor_w * 0.72", "monitor_h * 0.07" } })
 
 -- Workspace assignments
@@ -138,7 +138,6 @@ hl.window_rule({ match = { class = "^([Ss]team)$" }, workspace = "4 silent" })
 hl.window_rule({ match = { tag = "screenshare" }, workspace = "4 silent" })
 hl.window_rule({ match = { class = "^(virt-manager)$" }, workspace = "6 silent" })
 hl.window_rule({ match = { class = "^(.virt-manager-wrapped)$" }, workspace = "6 silent" })
-hl.window_rule({ match = { tag = "multimedia" }, workspace = "9 silent" })
 
 -- Float rules
 hl.window_rule({ match = { class = "^(com.adamcake.Bolt)$" }, float = true })
@@ -179,9 +178,6 @@ hl.window_rule({ match = { tag = "wallpaper" },    opacity = "0.9 0.7" })
 hl.window_rule({ match = { class = "^(gedit|org.gnome.TextEditor|mousepad)$" }, opacity = "0.8 0.7" })
 hl.window_rule({ match = { class = "^(deluge)$" }, opacity = "0.9 0.8" })
 hl.window_rule({ match = { class = "^(seahorse)$" }, opacity = "0.9 0.8" })
--- Video content and PiP always opaque
-hl.window_rule({ match = { tag = "multimedia_video" }, opaque = true })
-hl.window_rule({ match = { title = "^(Picture-in-Picture)$" }, opaque = true })
 
 -- Size rules
 hl.window_rule({ match = { tag = "KooL_Cheat" },  size = { "monitor_w * 0.65", "monitor_h * 0.90" } })
