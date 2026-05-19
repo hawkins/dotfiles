@@ -2,7 +2,6 @@
 
 local config_dir = (os.getenv("XDG_CONFIG_HOME") or os.getenv("HOME") .. "/.config") .. "/hypr"
 
-dofile(config_dir .. "/init/defaultApps.lua")
 dofile(config_dir .. "/init/matugen.lua")
 dofile(config_dir .. "/init/apps.lua")
 dofile(config_dir .. "/init/autostart.lua")
