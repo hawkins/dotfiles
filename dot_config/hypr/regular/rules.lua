@@ -2,28 +2,28 @@
 hl.window_rule({ match = { class = ".*" }, suppress_event = "maximize" })
 
 hl.window_rule({
-    match = { class = "^$", title = "^$", xwayland = true, float = true, fullscreen = false, pin = false },
-    no_focus = true,
+	match = { class = "^$", title = "^$", xwayland = true, float = true, fullscreen = false, pin = false },
+	no_focus = true,
 })
 
 hl.layer_rule({
-    match        = { namespace = "walker" },
-    blur         = true,
-    ignore_alpha = 0.41,
+	match = { namespace = "walker" },
+	blur = true,
+	ignore_alpha = 0.41,
 })
 
 hl.layer_rule({
-    match        = { namespace = "hyprland-shell:bar" },
-    blur         = true,
-    blur_popups  = true,
-    ignore_alpha = 0.41,
+	match = { namespace = "hyprland-shell:bar" },
+	blur = true,
+	blur_popups = true,
+	ignore_alpha = 0.41,
 })
 
 hl.layer_rule({
-    match        = { namespace = "hyprland-shell:notifs" },
-    blur         = true,
-    ignore_alpha = 0.41,
-    no_anim      = true,
+	match = { namespace = "hyprland-shell:notifs" },
+	blur = true,
+	ignore_alpha = 0.41,
+	no_anim = true,
 })
 
 hl.window_rule({ match = { class = "hyprland-share-picker" }, float = true })
@@ -233,7 +233,7 @@ hl.window_rule({
 		tag = "browser",
 		xwayland = false,
 		fullscreen = false,
-		title = "^.*(Apple TV|Twitch|YouTube|Netflix|Hulu|Prime Video|Disney+|HBO|Max|Peacock|Paramount|ESPN+|Crunchyroll|Funimation|MUBI|Tubi|Pluto TV|Plex|Jellyfin|Emby|SkyShowtime|discovery+|BritBox|Shudder|AMC+|Starz|Showtime).*$",
+		title = "^[\\s\\S]*(Apple[\\s\\S]{1,3}TV|Twitch|YouTube|Netflix|Hulu|Prime Video|Disney\\+|HBO|Max|Peacock|Paramount|ESPN\\+|Crunchyroll|Funimation|MUBI|Tubi|Pluto TV|Plex|Jellyfin|Emby|SkyShowtime|discovery\\+|BritBox|Shudder|AMC\\+|Starz|Showtime)[\\s\\S]*$",
 	},
 	opacity = "1.0 override 1.0 override",
 	opaque = true,
