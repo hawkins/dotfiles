@@ -19,7 +19,20 @@ hl.bind("SUPER + E",      hl.dsp.exec_cmd(files))
 -- Hawkins personal binds
 hl.bind("SUPER + S",          hl.dsp.window.pin())
 hl.bind("SUPER + R",          hl.dsp.exec_cmd("flatpak run com.adamcake.Bolt"))
-hl.bind("SUPER + SHIFT + R",  hl.dsp.exec_cmd(HOME .. "/code/float-runelite.sh 2100x1200"))
+hl.bind("SUPER + SHIFT + R", function()
+    local win = nil
+    for _, w in ipairs(hl.get_windows()) do
+        if w.class:match("RuneLite") then
+            win = w
+        end
+    end
+    if not win then return end
+    local will_float = not win.floating
+    hl.dispatch(hl.dsp.window.float({ action = "toggle", window = win }))
+    if will_float then
+        hl.dispatch(hl.dsp.window.resize({ x = 2100, y = 1200, window = win }))
+    end
+end)
 
 -- Features / extras
 hl.bind("SUPER + H",            hl.dsp.exec_cmd(scriptsDir .. "/KeyHints.sh"))
