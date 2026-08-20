@@ -165,7 +165,7 @@
 		"10": "10",
 	},
 },
-// NUMBERS and ICONS style with window rewrite 
+// NUMBERS and ICONS style with window rewrite
 "hyprland/workspaces#rw": {
 	"disable-scroll": true,
 	"all-outputs": true,
@@ -176,7 +176,7 @@
 	"on-scroll-up": "hyprctl dispatch workspace e+1",
 	"on-scroll-down": "hyprctl dispatch workspace e-1",
 	"persistent-workspaces": {
-		"*": 5
+		"*": [1, 2, 3, 4, 5]
 	  },
 	"format": "{icon} {windows}",
 	"format-window-separator": " ",
