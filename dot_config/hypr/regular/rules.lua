@@ -85,6 +85,8 @@ hl.window_rule({ match = { class = "^(steam_app_105600)$" }, tag = "+terraria" }
 -- Tags: gamestore
 hl.window_rule({ match = { title = "^([Ll]utris)$" }, tag = "+gamestore" })
 hl.window_rule({ match = { title = "^(r2modman)$" }, tag = "+gamestore" })
+hl.window_rule({ match = { title = "^([Ss]team)$" }, tag = "+gamestore" })
+hl.window_rule({ match = { class = "^([Ss]team)$" }, tag = "+gamestore" })
 
 -- Tags: file-manager
 hl.window_rule({ match = { class = "^([Tt]hunar|org.gnome.Nautilus|[Pp]cmanfm-qt)$" }, tag = "+file-manager" })
@@ -171,8 +173,7 @@ hl.window_rule({ match = { title = "^(Picture-in-Picture)$" }, move = { "monitor
 hl.window_rule({ match = { tag = "games" }, workspace = "2" })
 hl.window_rule({ match = { tag = "im" }, workspace = "3" })
 hl.window_rule({ match = { tag = "im_silent" }, workspace = "3 silent" })
-hl.window_rule({ match = { tag = "gamestore" }, workspace = "4" })
-hl.window_rule({ match = { class = "^([Ss]team)$" }, workspace = "4 silent" })
+hl.window_rule({ match = { tag = "gamestore" }, workspace = "4 silent" })
 hl.window_rule({ match = { tag = "screenshare" }, workspace = "4 silent" })
 hl.window_rule({ match = { class = "^(virt-manager)$" }, workspace = "6 silent" })
 hl.window_rule({ match = { class = "^(.virt-manager-wrapped)$" }, workspace = "6 silent" })
