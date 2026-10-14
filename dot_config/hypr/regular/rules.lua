@@ -78,6 +78,7 @@ hl.window_rule({ match = { class = "^(im.riot.Riot|Element)$" }, tag = "+im" })
 
 -- Tags: games
 hl.window_rule({ match = { class = "^(gamescope)$" }, tag = "+games" })
+hl.window_rule({ match = { title = "^Steam$" }, tag = "+games" })
 hl.window_rule({ match = { class = "^(steam_app_%d+)$" }, tag = "+games" })
 hl.window_rule({ match = { class = "^(valheim.+)$" }, tag = "+games" })
 hl.window_rule({ match = { class = "^(steam_app_105600)$" }, tag = "+terraria" })
