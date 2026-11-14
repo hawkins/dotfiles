@@ -1,0 +1,24 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* Main Config Office Curtain - input only, used by UserScripts/CurtainPosition.sh */
+
+@import "~/.config/rofi/config.rasi"
+
+/* ---- Mainbox ---- */
+mainbox {
+  children: [ "entry", "message" ];
+  height: inherit;
+}
+
+/* ---- Window ---- */
+window {
+  width: 30%;
+  height: inherit;
+}
+
+/* ---- Entry ---- */
+entry {
+  expand: true;
+  placeholder: " 🪟 Curtain % closed (0-100)";
+}
+
+listview {enable: false;}
